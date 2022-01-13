@@ -1,0 +1,11 @@
+Team CNN: Corina, Nicole, Nada
+APCS pd06
+Final Project Development Log
+Date: :DDD
+
+1/13/2022
+-----------
+* We came up with the idea of creating a chat bot that gives recommendations for all types of media.
+* If we have further time, we'll also make the bot do other things such as playing word games (or attempt to give bad therapy.)
+* We wrote brainstormed categories and (broad) genre classifications. 
+* Shamelessly went around asking for recommendations as to broaden our list of recommended works.
