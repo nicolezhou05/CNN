@@ -67,4 +67,11 @@ tales of wisdom gained...
 * If we have further time, we'll also make the bot do other things such as playing word games (or attempt to give bad therapy.)
 * We wrote brainstormed categories and (broad) genre classifications. 
 * Shamelessly went around asking for recommendations as to broaden our list of recommended works.
+
+
+2022-01-14
+--------------------------------------------------------------
+* With the data we were able to collect, we started to sort them into their genres
+* We hath been met with complications, as certain works fit across multiple genres --> What to do?
+* Considering different ways of sorting
 ==============================================================
