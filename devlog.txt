@@ -1,11 +1,70 @@
-Team CNN: Corina, Nicole, Nada
-APCS pd06
-Final Project Development Log
-Date: :DDD
+CNN
+Corina Chen
+Nada Hameed
+Nicole Zhou
+pd 06
+---------------------
+Your Bot Friend
 
-1/13/2022
------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+USAGE:
+* Replace all fields, angle brackets included, with specified info.
+  eg, pd <pd#> --> pd 3
+* Delete this instruction block once all teammates understand usage.
+
+devlog--
+Use keyboard shortcut to jump to end,
+ replicate entry template,
+ modify appropriately.
+
+zone of reflection--
+Flesh out each category whenever necessary, appropriate.
+ Need not be fully filled in until end of project,
+ but best done as you go along.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+/////////// Zone of Reflection \\\\\\\\\\\
+------------------------------------------
+OBSTACLES OVERCOME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wow we so BOSS bc...
+
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+blah blah pesky bug...
+maybe some of these will move into the Obs.Ovrcm section...
+
+COOL STUFF LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wow! oo!...
+
+MID-DEVELOPMENT DESIGN CHANGES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+we changed ___ to ___ bc...
+
+LESSONS LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tales of wisdom gained...
+||||||||||||||||||||||||||||||||||||||||||
+
+
+
+ ______   ______   __   __   __       ______   _______     
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+==============================================================
+
+
+2022-01-13
+--------------------------------------------------------------
 * We came up with the idea of creating a chat bot that gives recommendations for all types of media.
 * If we have further time, we'll also make the bot do other things such as playing word games (or attempt to give bad therapy.)
 * We wrote brainstormed categories and (broad) genre classifications. 
 * Shamelessly went around asking for recommendations as to broaden our list of recommended works.
+==============================================================
