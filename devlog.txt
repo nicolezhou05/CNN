@@ -74,4 +74,10 @@ tales of wisdom gained...
 * With the data we were able to collect, we started to sort them into their genres
 * We hath been met with complications, as certain works fit across multiple genres --> What to do?
 * Considering different ways of sorting
+
+2022-01-17
+--------------------------------------------------------------
+* Made a very basic frame for v0
+* v0 runs, but does not print what we want yet
+* Created new class, and worked on driver class Woo
 ==============================================================
