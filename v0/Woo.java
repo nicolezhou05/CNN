@@ -11,12 +11,21 @@ public class Woo{
     System.out.println(chitty.sayHello());
 		Scanner in = new Scanner (System.in);
 		String statement = in.nextLine();
-    System.out.println(chitty.startTalking(statement));
+    System.out.println(chitty.getName(statement));
+    statement = in.nextLine();
+    System.out.println(chitty.firstGetResponse(statement));
 
 		while (!statement.equals("bye"))
 		{
 			System.out.println (chitty.getResponse(statement));
 			statement = in.nextLine();
 		}
+    // while (!statement.equals("bye"))
+    // {
+    //   System.out.println(chitty.getResponse(statement));
+    //   statement = in.nextLine();
+    // }
+
   }
+
 }

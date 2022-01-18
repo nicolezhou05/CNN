@@ -6,20 +6,22 @@ public class Chatbot{
     return "hey there! what's your friend's name?";
   }
 
-public String startTalking(String statement){
-  getName(statement);
-  return "do you want to do something? yes or no?";
-  //System.out.println(firstGetResponse(statement));
-}
+  // public String startTalking(String statement){
+  //   getName(statement);
+  //   return "do you want to do something? yes or no?";
+  //   //System.out.println(firstGetResponse(statement));
+  // }
 
-  public void getName(String statement){
+  public String getName(String statement){
     name = statement;
-     System.out.println("what a coincidence! my name is " + name + " too; guess we're friends now!");
+     String x = "what a coincidence! my name is " + name + " too; guess we're friends now!";
+     String y = "\nDo you want to do something? yes or no?";
+     return x + y;
   }
 
-public String menu(){
-  return "ok! ";
-}
+  public String menu(){
+    return "ok! ";
+  }
 
   public String firstGetResponse(String statement){
     String response = "";
