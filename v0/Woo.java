@@ -2,14 +2,15 @@ import java.util.Scanner;
 
 //driver
 
-public class Woo{
+public class Woo {
 
   public static void main(String[] args){
-
+    // Opening
     System.out.println("--~~--~~--~~--\n");
     System.out.println("\n-~-~-~-\n\tjust a note: typing 'X' will end our conversation :((\n\t\tunless it's your friend's name ofc\n-~-~-~-\n");
     Chatbot chitty = new Chatbot();
 
+    // Chitty's first intake
     System.out.println(chitty.sayHello());
 		Scanner in = new Scanner (System.in);
     String statement = in.nextLine();
@@ -26,17 +27,15 @@ public class Woo{
       System.out.println(chitty.menuResponse(statement));
       statement = in.nextLine();
     }
+
+    //game menu
+
     //get random responses while chatting w chitty
 		while (!statement.equals("bye") && chitty.play == true && chitty.chat == true)
 		{
 			System.out.println (chitty.getResponse(statement));
 			statement = in.nextLine();
 		}
-    // while (!statement.equals("bye"))
-    // {
-    //   System.out.println(chitty.getResponse(statement));
-    //   statement = in.nextLine();
-    // }
 
   }
 
