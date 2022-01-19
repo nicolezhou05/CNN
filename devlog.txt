@@ -86,6 +86,7 @@ tales of wisdom gained...
 --------------------------------------------------------------
 * Worked on the user interface & the bot being able to respond correctly
 * At the moment, the user gets as far as the menu (if they asked to talk to bot)
+* They are able to get to the game menu as well, but chats and recs are not yet functional. 
 * QS: how can we scan the next line without doing it manually in Woo class/using booleans for everything?
 * Created UML diagrams, schedule, & plan
 ==============================================================
