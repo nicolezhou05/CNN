@@ -81,3 +81,10 @@ tales of wisdom gained...
 * v0 runs, but does not print what we want yet
 * Created new class, and worked on driver class Woo
 ==============================================================
+
+2022-01-18
+--------------------------------------------------------------
+* Worked on the user interface & the bot being able to respond correctly
+* At the moment, the user gets as far as the menu (if they asked to talk to bot)
+* QS: how can we scan the next line without doing it manually in Woo class/using booleans for everything?
+==============================================================
