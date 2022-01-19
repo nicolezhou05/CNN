@@ -1,28 +1,34 @@
 public class Chatbot{
 
+  //bot's name
   public static String name = "";
+  //keep playing?
+  public static boolean play = true;
+  //chat?
+  public static boolean chat = false;
+
   //say hello
   public String sayHello(){
     return "hey there! what's your friend's name?";
   }
 
-  // public String startTalking(String statement){
-  //   getName(statement);
-  //   return "do you want to do something? yes or no?";
-  //   //System.out.println(firstGetResponse(statement));
-  // }
 
   public String getName(String statement){
     name = statement;
-     String x = "what a coincidence! my name is " + name + " too; guess we're friends now!";
-     String y = "\nDo you want to do something? yes or no?";
-     return x + y;
+    String x = "what a coincidence! my name is " + name + " too... \n... \nguess we're friends now!";
+    String y = "\n\ndo you want to do something? yes or no?";
+    return x + y;
   }
 
   public String menu(){
-    return "ok! ";
+    String a = "\nok! here's what i can do, as your trusted friend " + name + ".";
+    String b = "\n\t- play a game! \n\t\t>say 'game' to play~";
+    String c = "\n\t- give you a recommendation! \n\t\t>say 'rec' for my wise insight hehe";
+    String d = "\n\t- chat with you and only you~ \n\t\t>say 'chat' to talk to me!";
+    return a + b + c + d;
   }
 
+//do you want to start talking to the bot?
   public String firstGetResponse(String statement){
     String response = "";
     if ((statement.trim()).length() == 0){
@@ -30,13 +36,13 @@ public class Chatbot{
 		}
 		else if (findKeyword(statement, "no") >= 0)
 		{
-			response = "ok... bye then.";
-      statement = "bye";
+			response = "\nok... bye then.";
+      play = false; //stop playing
 		}
     else if (findKeyword(statement, "yes") >= 0)
     {
-      response = "ok!";
-      menu();
+      //response = "ok!";
+      System.out.println(menu());
     }
     else {
       response = "yes or no?";
@@ -44,6 +50,7 @@ public class Chatbot{
     return response;
   }
 
+//only when chatting
   public String getResponse(String statement){
     String response = "";
 		if ((statement.trim()).length() == 0){
@@ -59,52 +66,6 @@ public class Chatbot{
 		}
 		return response;
   }
-
-//keywords
-  private int findKeyword(String statement, String goal,
-			int startPos)
-	{
-		String phrase = statement.trim().toLowerCase();
-		goal = goal.toLowerCase();
-
-		int psn = phrase.indexOf(goal, startPos);
-
-		while (psn >= 0)
-		{
-
-			String before = " ", after = " ";
-			if (psn > 0)
-			{
-				before = phrase.substring(psn - 1, psn);
-			}
-			if (psn + goal.length() < phrase.length())
-			{
-				after = phrase.substring(
-						psn + goal.length(),
-						psn + goal.length() + 1);
-			}
-
-			if (((before.compareTo("a") < 0) || (before
-					.compareTo("z") > 0)) // before is not a
-											// letter
-					&& ((after.compareTo("a") < 0) || (after
-							.compareTo("z") > 0)))
-			{
-				return psn;
-			}
-
-			psn = phrase.indexOf(goal, psn + 1);
-
-		}
-
-		return -1;
-	}
-
-
-	private int findKeyword(String statement, String goal)
-	{
-		return findKeyword(statement, goal, 0);
-	}
 
 //random response
   public String getRandomResponse(){
@@ -127,4 +88,50 @@ public class Chatbot{
 		}
 		return response;
 	}
+
+  //keywords
+    private int findKeyword(String statement, String goal,
+  			int startPos)
+  	{
+  		String phrase = statement.trim().toLowerCase();
+  		goal = goal.toLowerCase();
+
+  		int psn = phrase.indexOf(goal, startPos);
+
+  		while (psn >= 0)
+  		{
+
+  			String before = " ", after = " ";
+  			if (psn > 0)
+  			{
+  				before = phrase.substring(psn - 1, psn);
+  			}
+  			if (psn + goal.length() < phrase.length())
+  			{
+  				after = phrase.substring(
+  						psn + goal.length(),
+  						psn + goal.length() + 1);
+  			}
+
+  			if (((before.compareTo("a") < 0) || (before
+  					.compareTo("z") > 0)) // before is not a
+  											// letter
+  					&& ((after.compareTo("a") < 0) || (after
+  							.compareTo("z") > 0)))
+  			{
+  				return psn;
+  			}
+
+  			psn = phrase.indexOf(goal, psn + 1);
+
+  		}
+
+  		return -1;
+  	}
+
+
+  	private int findKeyword(String statement, String goal)
+  	{
+  		return findKeyword(statement, goal, 0);
+  	}
 }

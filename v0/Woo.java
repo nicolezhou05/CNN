@@ -6,6 +6,8 @@ public class Woo{
 
   public static void main(String[] args){
 
+    System.out.println("--~~--~~--~~--\n");
+
     Chatbot chitty = new Chatbot();
 
     System.out.println(chitty.sayHello());
@@ -15,7 +17,8 @@ public class Woo{
     statement = in.nextLine();
     System.out.println(chitty.firstGetResponse(statement));
 
-		while (!statement.equals("bye"))
+    //get random responses while chatting w chitty
+		while (!statement.equals("bye") && chitty.play == true && chitty.chat == true)
 		{
 			System.out.println (chitty.getResponse(statement));
 			statement = in.nextLine();
