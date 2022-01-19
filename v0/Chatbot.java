@@ -6,13 +6,15 @@ public class Chatbot{
   public static boolean play = true;
   //chat?
   public static boolean chat = false;
+  //menu options
+  public static boolean menu = false;
 
   //say hello
   public String sayHello(){
     return "hey there! what's your friend's name?";
   }
 
-
+  //bot's name is your friend's name
   public String getName(String statement){
     name = statement;
     String x = "what a coincidence! my name is " + name + " too... \n... \nguess we're friends now!";
@@ -20,6 +22,7 @@ public class Chatbot{
     return x + y;
   }
 
+  //menu options
   public String menu(){
     String a = "\nok! here's what i can do, as your trusted friend " + name + ".";
     String b = "\n\t- play a game! \n\t\t>say 'game' to play~";
@@ -28,7 +31,7 @@ public class Chatbot{
     return a + b + c + d;
   }
 
-//do you want to start talking to the bot?
+  //do you want to start talking to the bot?
   public String firstGetResponse(String statement){
     String response = "";
     if ((statement.trim()).length() == 0){
@@ -41,8 +44,12 @@ public class Chatbot{
 		}
     else if (findKeyword(statement, "yes") >= 0)
     {
-      //response = "ok!";
+      menu = true;
       System.out.println(menu());
+    }
+    else if (findKeyword(statement, "X") >= 0)
+    {
+      response = "\nbuh bye...";
     }
     else {
       response = "yes or no?";
@@ -50,7 +57,28 @@ public class Chatbot{
     return response;
   }
 
-//only when chatting
+  //menu responses
+  // public String menuChoices(String statement){
+  //   String response = "";
+  //   if ((statement.trim()).length() == 0){
+	// 		response = "choose something, friend of " + name + ".";
+	// 	}
+  //   else if (findKeyword(statement, "game")){
+  //     game();
+  //   }
+  //   else if (findKeyword(statement, "rec")){
+  //     rec();
+  //   }
+  //   else if (findKeyword(statement, "chat")){
+  //     chat();
+  //   }
+  //   else
+  //   {
+  //     System.out.println("not a choice buddy.");
+  //   }
+  //   return response;
+  // }
+  //only when chatting
   public String getResponse(String statement){
     String response = "";
 		if ((statement.trim()).length() == 0){
