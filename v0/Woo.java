@@ -23,7 +23,7 @@ public class Woo{
 
     //menu interface options
     while (chitty.menu == true){
-
+      System.out.println(chitty.menuResponse(statement));
       statement = in.nextLine();
     }
     //get random responses while chatting w chitty

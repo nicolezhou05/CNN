@@ -9,6 +9,11 @@ public class Chatbot{
   //menu options
   public static boolean menu = false;
 
+  //games
+
+  //guessNum
+  public static boolean num = false;
+
   //say hello
   public String sayHello(){
     return "hey there! what's your friend's name?";
@@ -58,26 +63,31 @@ public class Chatbot{
   }
 
   //menu responses
-  // public String menuChoices(String statement){
-  //   String response = "";
-  //   if ((statement.trim()).length() == 0){
-	// 		response = "choose something, friend of " + name + ".";
-	// 	}
-  //   else if (findKeyword(statement, "game")){
-  //     game();
-  //   }
-  //   else if (findKeyword(statement, "rec")){
-  //     rec();
-  //   }
-  //   else if (findKeyword(statement, "chat")){
-  //     chat();
-  //   }
-  //   else
-  //   {
-  //     System.out.println("not a choice buddy.");
-  //   }
-  //   return response;
-  // }
+  public String menuResponse(String statement){
+    String response = "";
+    if (findKeyword(statement, "X") >= 0){
+      play = false;
+    }
+    else if ((statement.trim()).length() == 0){
+			response = "choose something, friend of " + name + ".";
+		}
+    // else if (findKeyword(statement, "game")){
+    //   game();
+    // }
+    // else if (findKeyword(statement, "rec")){
+    //   rec();
+    // }
+    // else if (findKeyword(statement, "chat")){
+    //   chat();
+    // }
+    else
+    {
+      System.out.println("not a choice buddy.");
+    }
+    return response;
+  }
+
+
   //only when chatting
   public String getResponse(String statement){
     String response = "";
@@ -95,6 +105,32 @@ public class Chatbot{
 		return response;
   }
 
+//games
+
+  // public String game(String statement){
+  //   String response = "";
+  //   if ((statement.trim()).length() == 0){
+	// 		response = "what game, friendo?";
+	// 	}
+  //   else if (findKeyword(statement, "num")){
+  //     num = true;
+  //     guessNum();
+  //   }
+  //   else if (findKeyword(statement, "letter")){
+  //     endingLetter();
+  //   }
+  //   else if (findKeyword(statement, "madlibs")){
+  //     madlibs();
+  //   }
+  //   else if (findKeyword(statement, "hangman")){
+  //     hangman();
+  //   }
+  //   else
+  //   {
+  //     System.out.println("not a choice buddy.");
+  //   }
+  //   return response;
+  // }
 //random response
   public String getRandomResponse(){
     final int NUMBER_OF_RESPONSES = 3;
