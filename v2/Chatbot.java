@@ -77,7 +77,7 @@ public class Chatbot{
 		// 	response = "choose something, friend of " + name + ".";
 		// }
     else if (findKeyword(statement, "game") >= 0){
-      // gameResponse = true;
+      gameResponse = true;
       menu = false;
       GameMenu games = new GameMenu();
       System.out.println(games.gameMenu());

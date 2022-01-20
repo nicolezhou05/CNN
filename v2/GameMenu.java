@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class GameMenu extends Chatbot {
+
   Scanner in = new Scanner (System.in);
   String statement = in.nextLine();
 
@@ -15,24 +16,32 @@ public class GameMenu extends Chatbot {
     String d = "\n\t- create a madlib! \n\t\t>say 'madlibs' to make one~";
     String e = "\n\t- play 'hangman'! \n\t\t>say 'hangman'! to play~";
     System.out.println(a + b + c + d + e);
+    statement = in.nextLine();
     return game(statement);
   }
 
   public String game(String statement){
     String response = "";
+    statement = in.nextLine();
     if ((statement.trim()).length() == 0){
+      statement = in.nextLine();
       response = "what game, friendo?";
     }
     else if (findKeyword(statement, "num") >= 0){
       System.out.println("\n-~-~-");
+      statement = in.nextLine();
       GuessNum g = new GuessNum(1,100);
       g.playIter();
     }
-    // else if (findKeyword(statement, "letter") >= 0){
-    //   endingLetter();
-    // }
+    else if (findKeyword(statement, "letter") >= 0){
+      System.out.println("\n-~-~-");
+      statement = in.nextLine();
+      EndingLetter libby = new EndingLetter();
+      libby.play();
+    }
     else if (findKeyword(statement, "madlibs") >= 0){
       System.out.println("\n-~-~-");
+      statement = in.nextLine();
       Madlibs maddy = new Madlibs();
       System.out.println(maddy.play());
     }
