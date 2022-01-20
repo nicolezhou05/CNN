@@ -8,17 +8,6 @@ public class EndingLetter extends Chatbot{
 
   String mode = "";
 
-  private String[] easyA = {"apple", "ant", "annoy", "almost", "app"};
-  private String[] easyB = {"bunny", "boy", "ball", "bin", "board"};
-  private String[] easyC = {"cat", "corn", "cap", "coat", "clap"};
-  private String[] easyD = {"dog", "dime", "dizzy", "doll", "dart"};
-  private String[] easyE = {"elephant", "eat", "envelope", "earn", "elevator"};
-  private String[] easyF = {"fairy", "far", "frill", "fast", "fork"};
-  private String[] easyG = {"gorilla", "gourd", "grin", "greet", "grow"};
-  private String[] easyH = {"happy", "horn", "hat", "hiccup", "hotel"};
-  private String[] easyI = {"igloo", "ill", "ink", "indigo", "imp"};
-  private String[] dictionary2;
-
   public EndingLetter(){
     super();
     play = true;
