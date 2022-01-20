@@ -95,5 +95,5 @@ tales of wisdom gained...
 --------------------------------------------------------------
 * Created Chat class, and we're figuring out to incorporate it
 * Worked on fixing some of chatbot's messages (that shouldn't be popping up)
-* Created recbot chat to start incorporating the recommendations. We only got up to including the language menu before ~Corina's computer decided to not work~. 
+* Created recbot chat to start incorporating the recommendations. We only got up to including the language menu. 
 ==============================================================
