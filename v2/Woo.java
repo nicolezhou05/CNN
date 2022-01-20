@@ -30,6 +30,14 @@ public class Woo {
       statement = in.nextLine();
     }
 
+    // while (chitty.gameResponse = true){
+    //   statement = in.nextLine();
+    //   System.out.println(chitty.game(statement));
+    //   statement = in.nextLine();
+    // }
+
+
+
     //game menu
 
     //get random responses while chatting w chitty

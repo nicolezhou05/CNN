@@ -5,7 +5,7 @@ public class Recbot extends Chatbot {
   Scanner in = new Scanner (System.in);
   String statement = in.nextLine();
 
-  public recbot() {
+  public Recbot() {
     super();
   }
 

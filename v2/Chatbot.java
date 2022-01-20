@@ -10,7 +10,8 @@ public class Chatbot{
   //menu options
   public static boolean menu = false;
 
-  //games
+  //game menuResponse
+  public static boolean gameResponse = false;
 
   //guessNum
   //public static boolean num = false;
@@ -72,15 +73,18 @@ public class Chatbot{
     if (findKeyword(statement, "X") >= 0){
       play = false;
     }
-    else if ((statement.trim()).length() == 0){
-			response = "choose something, friend of " + name + ".";
-		}
+    // else if ((statement.trim()).length() == 0){
+		// 	response = "choose something, friend of " + name + ".";
+		// }
     else if (findKeyword(statement, "game") >= 0){
-      System.out.println(gameMenu());
+      // gameResponse = true;
+      menu = false;
+      GameMenu games = new GameMenu();
+      System.out.println(games.gameMenu());
     }
     else if (findKeyword(statement, "rec") >= 0){
       System.out.println("hello hello hello!");
-      recbot recs = new recbot();
+      Recbot recs = new Recbot();
       System.out.println(recs.languageSetting());
     }
     else if (findKeyword(statement, "chat") >= 0){
@@ -96,7 +100,7 @@ public class Chatbot{
   }
 
 //--------------------------Game-----------------------------
-
+/*
     public String gameMenu(){
       String a = "\nok! here's some interesting games to be beheald.";
       String b = "\n\t- play 'guess a num'! \n\t\t>say 'num' to play~";
@@ -127,14 +131,14 @@ public class Chatbot{
       // else if (findKeyword(statement, "hangman") >= 0){
       //   hangman();
       // }
-      else
-      {
-        System.out.println("not a choice buddy.");
-      }
+      // else
+      // {
+      //   System.out.println("not a choice buddy.");
+      // }
       return response;
     }
 
-
+*/
 //-----------------------Recommendation--------------------------
 
 
