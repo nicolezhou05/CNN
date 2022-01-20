@@ -90,3 +90,9 @@ tales of wisdom gained...
 * QS: how can we scan the next line without doing it manually in Woo class/using booleans for everything?
 * Created UML diagrams, schedule, & plan
 ==============================================================
+
+2022-01-19
+--------------------------------------------------------------
+* Created Chat class, and we're figuring out to incorporate it
+* Worked on fixing some of chatbot's messages (that shouldn't be popping up)
+==============================================================
