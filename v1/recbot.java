@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class recbot extends Chatbot {
+public class Recbot extends Chatbot {
 
   Scanner in = new Scanner (System.in);
   String statement = in.nextLine();

@@ -13,6 +13,7 @@ public class Chat extends Chatbot{
 
   public String chat() {
     System.out.println("hello how's it going?");
+    statement = in.nextLine();
     return getGoing(statement);
   }
 

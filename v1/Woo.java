@@ -17,6 +17,7 @@ public class Woo {
     if(statement.equals("X")){
       chitty.play = false;
     }
+
     System.out.println(chitty.getName(statement));
 
     statement = in.nextLine();
@@ -24,6 +25,7 @@ public class Woo {
 
     //menu interface options
     while (chitty.menu == true){
+      statement = in.nextLine();
       System.out.println(chitty.menuResponse(statement));
       statement = in.nextLine();
     }

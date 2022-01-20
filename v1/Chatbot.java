@@ -13,7 +13,7 @@ public class Chatbot{
   //games
 
   //guessNum
-  public static boolean num = false;
+  //public static boolean num = false;
 
 
 //-------------------------Initial Greeting-------------------------
@@ -79,11 +79,12 @@ public class Chatbot{
       System.out.println(gameMenu());
     }
     else if (findKeyword(statement, "rec") >= 0){
-      System.out.println(rec());
+      System.out.println("hello hello hello!");
       recbot recs = new recbot();
       System.out.println(recs.languageSetting());
     }
     else if (findKeyword(statement, "chat") >= 0){
+      System.out.println("\n-~-~-");
       Chat talker = new Chat();
       talker.chat();
     }
@@ -93,49 +94,6 @@ public class Chatbot{
     }
     return response;
   }
-
-//-----------------------------Chatting------------------------------
-/*
-  a little confused about getting the chatting started
-*/
-
-  public String getResponse(String statement){
-    String response = "";
-		if ((statement.trim()).length() == 0){
-			response = "Don't be like that; talk to me!";
-		}
-		else if (findKeyword(statement, "no") >= 0)
-		{
-			response = "Why so negative?";
-		}
-    else
-		{
-			response = getRandomResponse();
-		}
-		return response;
-  }
-
-  //random response
-    public String getRandomResponse(){
-      final int NUMBER_OF_RESPONSES = 3;
-  		double r = Math.random();
-  		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
-  		String response = "";
-
-  		if (whichResponse == 0)
-  		{
-  			response = "Interesting, tell me more.";
-  		}
-  		else if (whichResponse == 1)
-  		{
-  			response = "Hmmm.";
-  		}
-  		else if (whichResponse == 2)
-  		{
-  			response = "Do you really think so?";
-  		}
-  		return response;
-  	}
 
 //--------------------------Game-----------------------------
 
@@ -153,17 +111,20 @@ public class Chatbot{
       if ((statement.trim()).length() == 0){
   			response = "what game, friendo?";
   		}
-      // else if (findKeyword(statement, "num")){
-      //   num = true;
-      //   guessNum();
-      // }
-      // else if (findKeyword(statement, "letter")){
+      else if (findKeyword(statement, "num") >= 0){
+        System.out.println("\n-~-~-");
+        GuessNum g = new GuessNum(1,100);
+        g.playIter();
+      }
+      // else if (findKeyword(statement, "letter") >= 0){
       //   endingLetter();
       // }
-      // else if (findKeyword(statement, "madlibs")){
-      //   madlibs();
-      // }
-      // else if (findKeyword(statement, "hangman")){
+      else if (findKeyword(statement, "madlibs") >= 0){
+        System.out.println("\n-~-~-");
+        Madlibs maddy = new Madlibs();
+        System.out.println(maddy.play());
+      }
+      // else if (findKeyword(statement, "hangman") >= 0){
       //   hangman();
       // }
       else
@@ -175,8 +136,58 @@ public class Chatbot{
 
 
 //-----------------------Recommendation--------------------------
-    public String rec(){
-      return "hello, hello, hello!";
+
+
+//-----------------------------Chatting------------------------------
+    /*
+    a little confused about getting the chatting started
+    */
+
+    public String getResponse(String statement){
+      String response = "";
+      if ((statement.trim()).length() == 0){
+        response = "don't be like that; talk to me!";
+      }
+      else if (findKeyword(statement, "no") >= 0)
+      {
+        response = "oh?";
+      }
+      else if (findKeyword(statement, "?") >= 0)
+      {
+        response = "not sure I know how to answer..."; //only works if '?' isn't attached to a word hm
+      }
+      else if (findKeyword(statement, "school") >= 0 || findKeyword(statement, "class") >= 0
+      || findKeyword(statement, "work") >= 0)
+      {
+        response = "want to talk about something else?";
+      }
+      else
+      {
+        response = getRandomResponse();
+      }
+      return response;
+    }
+
+    //random response
+    public String getRandomResponse(){
+      final int NUMBER_OF_RESPONSES = 3;
+      double r = Math.random();
+      int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
+      String response = "";
+
+      if (whichResponse == 0)
+      {
+        response = "fascinating, tell me more!";
+      }
+      else if (whichResponse == 1)
+      {
+        response = "hrm, that's...";
+      }
+      else if (whichResponse == 2)
+      {
+        response = "really?";
+      }
+      return response;
     }
 
 //---------------------------Keywords----------------------------
