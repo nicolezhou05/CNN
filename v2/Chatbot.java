@@ -80,7 +80,7 @@ public class Chatbot{
       gameResponse = true;
       menu = false;
       GameMenu games = new GameMenu();
-      System.out.println(games.gameMenu());
+      games.gameMenu();
     }
     else if (findKeyword(statement, "rec") >= 0){
       System.out.println("hello hello hello!");

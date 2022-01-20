@@ -56,6 +56,7 @@ public class EndingLetter extends Chatbot{
 
     ArrayList used = new ArrayList<String>();
     fillDictionary(mode);
+    return;
   }
 
   public String chooseMode(String statement){
@@ -88,7 +89,7 @@ public class EndingLetter extends Chatbot{
     //easy mode - fill ArrayLists with these
     if (mode == "easy"){
 
-      A.add("apple");
+      /*A.add("apple");
       A.add("ant");
       A.add("annoy");
       A.add("almost");
@@ -122,12 +123,11 @@ public class EndingLetter extends Chatbot{
       F.add("far");
       F.add("frill");
       F.add("fast");
-      F.add("fork");
+      F.add("fork");*/
 
-    }
-    else if(mode == "places"){
+    } else if (mode == "places"){
 
-      A.add("arkansas");
+/*      A.add("arkansas");
       A.add("alabama");
       A.add("arkansas");
       A.add("algeria");
@@ -271,10 +271,9 @@ public class EndingLetter extends Chatbot{
 
       Z.add("zanzibar");
       Z.add("zimbabwe");
-      Z.add("zambia");
-    }
-    else if(mode == "hard"){
-      A.add("anteater");
+      Z.add("zambia");*/
+    } else if (mode == "hard"){
+/*      A.add("anteater");
       A.add("assuage");
       A.add("appropriate");
       A.add("affluent");
@@ -359,36 +358,80 @@ public class EndingLetter extends Chatbot{
       N.add("nativism");
 
       O.add("ostentious");
-      
+*/
     }
 
-      //
-      // A = {"apple", "ant", "annoy", "almost", "app"};
-      // B = {"bunny", "boy", "ball", "bin", "board"};
-      // C = {"cat", "corn", "cap", "coat", "clap"};
-      // D = {"dog", "dime", "dizzy", "doll", "dart"};
-      // E = {"elephant", "eat", "envelope", "earn", "elevator"};
-      // F = {"fairy", "far", "frill", "fast", "fork"};
-      // G = {"gorilla", "gourd", "grin", "greet", "grow"};
-      // H = {"happy", "horn", "hat", "hiccup", "hotel"};
-      // I = {"igloo", "ill", "ink", "indigo", "imp"};
-      // J = {"jump", "joke", "jog", "jam", "juggle"};
-      // K = {"kangaroo", "kite", "kin", "know", "knock"};
-      // L = {"lion", "little", "lie", "lips", "large"};
-      // M = {"monkey", "martian", "mat", "most", "mine"};
-      // N = {"nap", "nothing", "nail", "nick", "now"};
-      // O = {"orange", "open", "organ", "oak", "oats"};
-      // P = {"penny", "pun", "please", "purse", "prim"};
-      // Q = {"queen", "quiet", "quip", "quack", "quill"};
-      // R = {"raisin", "run", "rail", "rat", "rant"};
-      // S = {"slip", "snake", "sway", "swoon", "swift"};
-      // T = {"tire", "try", "thwack", "twist", "trip"};
-      // U = {"under", "up", "usher", "utter", "umbrella"};
-      // V = {"vinyl", "vain", "vole", "veer", "violet"};
-      // W = {"wrist", "wine", "writ", "waste", "water"};
-      // X = {"xerox", "xenon", "xray", "xylol", "xerus"};
-      // Y = {"yellow", "yarn", "yawn", "yeast", "yip"};
-      // Z = {"zebra", "zone", "zipper", "zealous", "zoo"};
+    /*
+      A = {"apple", "ant", "annoy", "almost", "app"};
+      B = {"bunny", "boy", "ball", "bin", "board"};
+      C = {"cat", "corn", "cap", "coat", "clap"};
+      D = {"dog", "dime", "dizzy", "doll", "dart"};
+      E = {"elephant", "eat", "envelope", "earn", "elevator"};
+      F = {"fairy", "far", "frill", "fast", "fork"};
+      G = {"gorilla", "gourd", "grin", "greet", "grow"};
+      H = {"happy", "horn", "hat", "hiccup", "hotel"};
+      I = {"igloo", "ill", "ink", "indigo", "imp"};
+      J = {"jump", "joke", "jog", "jam", "juggle"};
+      K = {"kangaroo", "kite", "kin", "know", "knock"};
+      L = {"lion", "little", "lie", "lips", "large"};
+      M = {"monkey", "martian", "mat", "most", "mine"};
+      N = {"nap", "nothing", "nail", "nick", "now"};
+      O = {"orange", "open", "organ", "oak", "oats"};
+      P = {"penny", "pun", "please", "purse", "prim"};
+      Q = {"queen", "quiet", "quip", "quack", "quill"};
+      R = {"raisin", "run", "rail", "rat", "rant"};
+      S = {"slip", "snake", "sway", "swoon", "swift"};
+      T = {"tire", "try", "thwack", "twist", "trip"};
+      U = {"under", "up", "usher", "utter", "umbrella"};
+      V = {"vinyl", "vain", "vole", "veer", "violet"};
+      W = {"wrist", "wine", "writ", "waste", "water"};
+      X = {"xerox", "xenon", "xray", "xylol", "xerus"};
+      Y = {"yellow", "yarn", "yawn", "yeast", "yip"};
+      Z = {"zebra", "zone", "zipper", "zealous", "zoo"};*/
     }
-  }
+    //---------------------------Keywords----------------------------
+    private int findKeyword(String statement, String goal,
+    int startPos)
+    {
+      String phrase = statement.trim().toLowerCase();
+      goal = goal.toLowerCase();
+
+      int psn = phrase.indexOf(goal, startPos);
+
+      while (psn >= 0)
+      {
+
+        String before = " ", after = " ";
+        if (psn > 0)
+        {
+          before = phrase.substring(psn - 1, psn);
+        }
+        if (psn + goal.length() < phrase.length())
+        {
+          after = phrase.substring(
+          psn + goal.length(),
+          psn + goal.length() + 1);
+        }
+
+        if (((before.compareTo("a") < 0) || (before
+        .compareTo("z") > 0)) // before is not a
+        // letter
+        && ((after.compareTo("a") < 0) || (after
+        .compareTo("z") > 0)))
+        {
+          return psn;
+        }
+
+        psn = phrase.indexOf(goal, psn + 1);
+
+      }
+
+      return -1;
+    }
+
+
+    private int findKeyword(String statement, String goal)
+    {
+      return findKeyword(statement, goal, 0);
+    }
 }
