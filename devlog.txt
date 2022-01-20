@@ -103,5 +103,7 @@ tales of wisdom gained...
 * Created flowchart to show the paths the user can take
 * Wrote code for GuessNum game and Madlibs game, but the user cannot play them yet
 * Started EndingLetter game code
-* Created GameMenu class, but currently, it is not able to run with Woo and Chatbot. There is still an issue getting Madlibs to run properly in commandline.
+* Created GameMenu class, and is able to run with Woo and Chatbot, but doesn't do what it should.
+* There is still an issue getting Madlibs to run properly in commandline.
+* Everything runs, and the other classes are being called, but there is no proper output.
 ==============================================================
