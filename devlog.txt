@@ -101,4 +101,5 @@ tales of wisdom gained...
 2022-01-20
 --------------------------------------------------------------
 * Created flowchart to show the paths the user can take
+* Wrote code for GuessNum game and Madlibs game, but the user cannot play them yet
 ==============================================================
