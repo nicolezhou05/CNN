@@ -34,6 +34,8 @@ public class Madlibs extends Chatbot{
     String f = in.nextLine();
     System.out.println("\n\t >tell me an emotion!");
     String g = in.nextLine();
+    System.out.println("\n\t >type out a number!");
+    String h = in.nextLine();
 
     String story = "\nIt was a sunny day in " + a +
     ", \nand " + b + " was looking for something to do. \nTheir " + c
