@@ -78,9 +78,11 @@ public class Chatbot{
     else if (findKeyword(statement, "game") >= 0){
       System.out.println(gameMenu());
     }
-    // else if (findKeyword(statement, "rec")){
-    //   rec();
-    // }
+    else if (findKeyword(statement, "rec") >= 0){
+      System.out.println(rec());
+      recbot recs = new recbot();
+      System.out.println(recs.languageSetting());
+    }
     else if (findKeyword(statement, "chat") >= 0){
       Chat talker = new Chat();
       talker.chat();
@@ -173,9 +175,9 @@ public class Chatbot{
 
 
 //-----------------------Recommendation--------------------------
-    // public String rec(){
-    //   //bleh stuffs
-    // }
+    public String rec(){
+      return "hello, hello, hello!";
+    }
 
 //---------------------------Keywords----------------------------
     private int findKeyword(String statement, String goal,
