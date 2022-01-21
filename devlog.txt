@@ -117,4 +117,6 @@ tales of wisdom gained...
 	* this compiles all of the java files in the version
 * Updated EndingLetter flowchart
 * The user can sort of play EndingLetter game, but not completely
+* Created Hangman class
+* Created Hangman flowchart
 ==============================================================
