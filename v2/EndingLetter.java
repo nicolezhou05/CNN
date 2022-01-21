@@ -34,7 +34,13 @@ public class EndingLetter extends Chatbot{
   ArrayList W = new ArrayList<String>();
   ArrayList X = new ArrayList<String>();
   ArrayList Y = new ArrayList<String>();
-  ArrayList Z = new ArrayList<String>();
+  ArrayList<String> Z = new ArrayList<>();
+
+  ArrayList<ArrayList<String>> dictionary = new ArrayList<ArrayList<String>>();
+
+  for (int i = 0 ; i < 26 ; i++) {
+    dictionary.add(new ArrayList<String>());
+  }
 
   public EndingLetter(){
     super();
@@ -117,7 +123,7 @@ public class EndingLetter extends Chatbot{
 
     //easy mode - fill ArrayLists with these
     if (mode == "easy"){
-
+      dictionary.get(0).add("apple");
       /*A.add("apple");
       A.add("ant");
       A.add("annoy");

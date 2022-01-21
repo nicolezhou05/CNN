@@ -6,11 +6,12 @@ public class GameMenu extends Chatbot {
   String statement = in.nextLine();
 
   public GameMenu(){
-    super();
+    System.out.println("50");
 
   }
 
   public String gameMenu(){
+    System.out.println("100");
     String a = "\nok! here're some interesting games to behold.";
     String b = "\n\t- play 'guess a num'! \n\t\t>say 'num' to play~";
     String c = "\n\t- play the 'ending letter game'! \n\t\t>say 'letter' to play~";
@@ -34,12 +35,12 @@ public class GameMenu extends Chatbot {
       GuessNum g = new GuessNum(1,100);
       g.playIter();
     }
-    else if (findKeyword(statement, "letter") >= 0){
-      System.out.println("\n-~-~-");
-      statement = in.nextLine();
-      EndingLetter libby = new EndingLetter();
-      libby.play();
-    }
+    // else if (findKeyword(statement, "letter") >= 0){
+    //   System.out.println("\n-~-~-");
+    //   statement = in.nextLine();
+    //   EndingLetter libby = new EndingLetter();
+    //   libby.play();
+    // }
     else if (findKeyword(statement, "madlibs") >= 0){
       System.out.println("\n-~-~-");
       statement = in.nextLine();
