@@ -24,17 +24,16 @@ public class Woo {
     System.out.println(chitty.firstGetResponse(statement));
 
     //menu interface options
+    statement = in.nextLine();
     while (chitty.menu == true){
-      statement = in.nextLine();
       System.out.println(chitty.menuResponse(statement));
-      statement = in.nextLine();
     }
 
-    while (chitty.gameResponse = true){
-      statement = in.nextLine();
-      System.out.println(chitty.games.gameMenu()); //error
-      statement = in.nextLine();
-    }
+    // while (chitty.gameResponse = true){
+    //   statement = in.nextLine();
+    //   System.out.println(chitty.games.gameMenu()); //error
+    //   statement = in.nextLine();
+    // }
 
 
 

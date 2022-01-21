@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class EndingLetter extends Chatbot{
 
   Scanner in = new Scanner (System.in);
-  String statement = "";
 
   String mode = "";
 
@@ -34,7 +33,13 @@ public class EndingLetter extends Chatbot{
   ArrayList W = new ArrayList<String>();
   ArrayList X = new ArrayList<String>();
   ArrayList Y = new ArrayList<String>();
-  ArrayList Z = new ArrayList<String>();
+  ArrayList<String> Z = new ArrayList<>();
+
+  ArrayList<ArrayList<String>> dictionary = new ArrayList<ArrayList<String>>();
+
+  // for (int i = 0 ; i < 26 ; i++) {
+  //   dictionary.add(new ArrayList<String>());
+  // }
 
   public EndingLetter(){
     super();
@@ -54,7 +59,7 @@ public class EndingLetter extends Chatbot{
     System.out.println(m + n + o + p + q + r + s + t);
 
     //choose mode and fill dictionary
-    statement = in.nextLine();
+    String statement = in.nextLine();
     System.out.println(chooseMode(statement));
     fillDictionary(mode);
 
@@ -64,90 +69,8 @@ public class EndingLetter extends Chatbot{
     //play
     System.out.println("\n-~-~-\ngo ahead!");
     statement = in.nextLine();
-    String lastLtr = statement.substring(string.length()-1);
+    String lastLtr = statement.substring(statement.length()-1);
     int lastNum = 0;
-
-    //testing using nums instead of letters
-
-    if (lastLtr == "a"){
-      lastNum = 1;
-    }
-    if (lastLtr == "b"){
-      lastNum = 2;
-    }
-    if (lastLtr == "c"){
-      lastNum = 3;
-    }
-    if (lastLtr == "d"){
-      lastNum = 4;
-    }
-    if (lastLtr == "e"){
-      lastNum = 5;
-    }
-    if (lastLtr == "f"){
-      lastNum = 6;
-    }
-    if (lastLtr == "g"){
-      lastNum = 7;
-    }
-    if (lastLtr == "h"){
-      lastNum = 8;
-    }
-    if (lastLtr == "i"){
-      lastNum = 9;
-    }
-    if (lastLtr == "j"){
-      lastNum = 10;
-    }
-    if (lastLtr == "k"){
-      lastNum = 11;
-    }
-    if (lastLtr == "l"){
-      lastNum = 12;
-    }
-    if (lastLtr == "m"){
-      lastNum = 13;
-    }
-    if (lastLtr == "n"){
-      lastNum = 14;
-    }
-    if (lastLtr == "o"){
-      lastNum = 15;
-    }
-    if (lastLtr == "p"){
-      lastNum = 16;
-    }
-    if (lastLtr == "q"){
-      lastNum = 17;
-    }
-    if (lastLtr == "r"){
-      lastNum = 18;
-    }
-    if (lastLtr == "s"){
-      lastNum = 19;
-    }
-    if (lastLtr == "t"){
-      lastNum = 20;
-    }
-    if (lastLtr == "u"){
-      lastNum = 21;
-    }
-    if (lastLtr == "v"){
-      lastNum = 22;
-    }
-    if (lastLtr == "w"){
-      lastNum = 23;
-    }
-    if (lastLtr == "x"){
-      lastNum = 24;
-    }
-    if (lastLtr == "y"){
-      lastNum = 25;
-    }
-    if (lastLtr == "z"){
-      lastNum = 26;
-    }
-
 
     if (lastLtr == "a"){
       System.out.println(A.get(0));
@@ -199,7 +122,7 @@ public class EndingLetter extends Chatbot{
 
     //easy mode - fill ArrayLists with these
     if (mode == "easy"){
-
+      dictionary.get(0).add("apple");
       /*A.add("apple");
       A.add("ant");
       A.add("annoy");

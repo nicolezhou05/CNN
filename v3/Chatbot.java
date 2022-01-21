@@ -74,14 +74,14 @@ public class Chatbot{
       menu = false;
       play = false;
     }
-    // else if ((statement.trim()).length() == 0){
-		// 	response = "choose something, friend of " + name + ".";
-		// }
+    else if ((statement.trim()).length() == 0){
+			response = "choose something, friend of " + name + ".";
+		}
     else if (findKeyword(statement, "game") >= 0){
-      gameResponse = true;
       menu = false;
+      gameResponse = true;
       GameMenu games = new GameMenu();
-      games.gameMenu();
+      return games.gameMenu();
     }
     else if (findKeyword(statement, "rec") >= 0){
       menu = false;
