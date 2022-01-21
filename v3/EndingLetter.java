@@ -6,9 +6,10 @@ public class EndingLetter extends Chatbot{
   Scanner in = new Scanner (System.in);
 
   String mode = "";
+  private int lives = 2;
 
   //one per letter of the alphabet
-  ArrayList A = new ArrayList<String>();
+  /*ArrayList A = new ArrayList<String>();
   ArrayList B = new ArrayList<String>();
   ArrayList C = new ArrayList<String>();
   ArrayList D = new ArrayList<String>();
@@ -33,13 +34,9 @@ public class EndingLetter extends Chatbot{
   ArrayList W = new ArrayList<String>();
   ArrayList X = new ArrayList<String>();
   ArrayList Y = new ArrayList<String>();
-  ArrayList<String> Z = new ArrayList<>();
+  ArrayList<String> Z = new ArrayList<>();*/
 
   ArrayList<ArrayList<String>> dictionary = new ArrayList<ArrayList<String>>();
-
-  // for (int i = 0 ; i < 26 ; i++) {
-  //   dictionary.add(new ArrayList<String>());
-  // }
 
   public EndingLetter(){
     super();
@@ -61,26 +58,49 @@ public class EndingLetter extends Chatbot{
     //choose mode and fill dictionary
     String statement = in.nextLine();
     System.out.println(chooseMode(statement));
+
+    for (int i = 0 ; i < 26 ; i++) {
+      dictionary.add(new ArrayList<String>());
+    }
+
     fillDictionary(mode);
 
     //used words
     ArrayList used = new ArrayList<String>();
 
     //play
-    System.out.println("\n-~-~-\ngo ahead!");
-    statement = in.nextLine();
-    String lastLtr = statement.substring(statement.length()-1);
-    int lastNum = 0;
+    System.out.println("\n-~-~-\ngo ahead!\n");
+    //statement = in.nextLine();
 
-    if (lastLtr == "a"){
-      System.out.println(A.get(0));
-      used.add(A.get(0));
-      A.remove(0);
+    while (true){
+      statement = in.nextLine();
+      String botWord = "";
+      String lastLtr = statement.substring(statement.length()-1);
+
+      //is statement used?
+      for(int i = 0; i < used.size(); i++){
+        if (statement == used.get(i)){
+          lives--;
+          System.out.println("that's been used! " + lives + " left...");
+        }
+      }
+
+      if (lastLtr == "a"){
+        if (checkSize(dictionary.get(0))){
+          System.out.println(dictionary.get(0).get(0));
+          used.add(dictionary.get(0).get(0));
+          dictionary.get(0).remove(0);
+          statement = in.nextLine();
+        } else
+        System.out.println("\noh no... i have no more words left\n\tcongrats, you won!");
+      }
+      if (lastLtr == "b"){
+        System.out.println(dictionary.get(1).get(0));
+        used.add(dictionary.get(1).get(0));
+        dictionary.get(1).remove(0);
+      }
     }
-    if (lastLtr == "b"){
-      System.out.println(B.get(0));
-      B.remove(0);
-    }
+
     return mode;
   }
 

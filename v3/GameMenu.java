@@ -16,7 +16,6 @@ public class GameMenu extends Chatbot {
     String e = "\n\t- play 'hangman'! \n\t\t>say 'hangman'! to play~";
     System.out.println(a + b + c + d + e);
     String statement = in.nextLine();
-    System.out.println(statement);
     return game(statement);
   }
 
