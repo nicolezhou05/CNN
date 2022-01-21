@@ -26,8 +26,7 @@ public class Woo {
     //menu interface options
     statement = in.nextLine();
     while (chitty.menu == true){
-      System.out.println("1 " + statement);
-      System.out.println("->> " + chitty.menuResponse(statement));
+      System.out.println(chitty.menuResponse(statement));
     }
 
     // while (chitty.gameResponse = true){

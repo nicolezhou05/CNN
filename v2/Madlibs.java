@@ -6,16 +6,13 @@ public class Madlibs extends Chatbot{
   Scanner in = new Scanner (System.in);
   //String statement = in.nextLine();
 
-  //ArrayList<String> collection;
-
   public Madlibs(){
     super();
     play = true;
   }
 
   public String play() {
-    System.out.println("let's play some madlibs! \n\tsay a word in the provided category!\n");
-    //statement = in.nextLine();
+    System.out.println("let's play some madlibs! \n\tsay a word in the provided category!");
     return playLibs();
   }
 
@@ -32,7 +29,7 @@ public class Madlibs extends Chatbot{
     String e = in.nextLine();
     System.out.println("\n\t >tell me an adjective!");
     String f = in.nextLine();
-    System.out.println("\n\t >tell me an emotion!");
+    System.out.println("\n\t >tell me an emotion (in noun form)!");
     String g = in.nextLine();
     System.out.println("\n\t >type out a number!");
     String h = in.nextLine();
@@ -45,7 +42,7 @@ public class Madlibs extends Chatbot{
      + " promptly threw it back in the water. \nAfter contemplating for a whole " + h
      + " seconds, \n" + b + " grabbed the " + e + " again and ate it, \nhoping it'd make their " + c
      + " feel better. \nIt didn't.\n";
-
-     return story;
+     String x = "\nhaha this was fun, here's your story:\n";
+     return x + story;
   }
 }

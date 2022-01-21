@@ -5,7 +5,7 @@ public class GuessNum extends Chatbot{
   //instance vars
   private int _lo, _hi, _guessCtr, _target;
   Scanner sc = new Scanner( System.in );
-  int guess = sc.nextInt();
+  //int guess = sc.nextInt();
 
   public GuessNum( int a, int b ){
     _lo = Math.min(a,b);
@@ -15,7 +15,7 @@ public class GuessNum extends Chatbot{
   }
 
   public void playIter(){
-    //int guess;
+    int guess;
     while( true ) {
       System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
       guess = sc.nextInt();

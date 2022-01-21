@@ -107,3 +107,12 @@ tales of wisdom gained...
 * There is still an issue getting Madlibs to run properly in commandline.
 * Everything runs, and the other classes are being called, but there is no proper output.
 ==============================================================
+
+2022-01-21
+--------------------------------------------------------------
+* The user can play madlibs, guessNum, and EndingLetter
+* EndingLetter code is still in process (so user can't play correctly)
+* For some reason, some of the java files aren't compiling with javac Woo.java
+	* instead, we've had to type: $javac *java
+	* this compiles all of the java files in the version
+==============================================================

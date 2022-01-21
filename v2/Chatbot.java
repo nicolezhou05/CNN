@@ -70,26 +70,18 @@ public class Chatbot{
   //menu responses
   public String menuResponse(String statement){
     String response = "";
-    System.out.println("A");
-    if (statement.equals("game")) {
-      System.out.println("B");
-      GameMenu games = new GameMenu();
-      System.out.println("C");
-      return games.gameMenu();
-    }
-    else if (findKeyword(statement, "X") >= 0){
+    if (findKeyword(statement, "X") >= 0){
       menu = false;
       play = false;
     }
     else if ((statement.trim()).length() == 0){
 			response = "choose something, friend of " + name + ".";
 		}
-    else if (statement.equals("gameAAAA")){
-      //menu = false;
-      //gameResponse = true;
+    else if (findKeyword(statement, "game") >= 0){
+      menu = false;
+      gameResponse = true;
       GameMenu games = new GameMenu();
       return games.gameMenu();
-
     }
     else if (findKeyword(statement, "rec") >= 0){
       menu = false;

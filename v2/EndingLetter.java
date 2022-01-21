@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class EndingLetter extends Chatbot{
 
   Scanner in = new Scanner (System.in);
-  String statement = "";
 
   String mode = "";
 
@@ -38,9 +37,9 @@ public class EndingLetter extends Chatbot{
 
   ArrayList<ArrayList<String>> dictionary = new ArrayList<ArrayList<String>>();
 
-  for (int i = 0 ; i < 26 ; i++) {
-    dictionary.add(new ArrayList<String>());
-  }
+  // for (int i = 0 ; i < 26 ; i++) {
+  //   dictionary.add(new ArrayList<String>());
+  // }
 
   public EndingLetter(){
     super();
@@ -60,7 +59,7 @@ public class EndingLetter extends Chatbot{
     System.out.println(m + n + o + p + q + r + s + t);
 
     //choose mode and fill dictionary
-    statement = in.nextLine();
+    String statement = in.nextLine();
     System.out.println(chooseMode(statement));
     fillDictionary(mode);
 
@@ -70,7 +69,7 @@ public class EndingLetter extends Chatbot{
     //play
     System.out.println("\n-~-~-\ngo ahead!");
     statement = in.nextLine();
-    String lastLtr = statement.substring(string.length()-1);
+    String lastLtr = statement.substring(statement.length()-1);
     int lastNum = 0;
 
     if (lastLtr == "a"){
