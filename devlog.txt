@@ -6,25 +6,6 @@ pd 06
 ---------------------
 Your Bot Friend
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-USAGE:
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete this instruction block once all teammates understand usage.
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template,
- modify appropriately.
-
-zone of reflection--
-Flesh out each category whenever necessary, appropriate.
- Need not be fully filled in until end of project,
- but best done as you go along.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
@@ -51,13 +32,13 @@ tales of wisdom gained...
 
 
 
- ______   ______   __   __   __       ______   _______     
-/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
-\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
- \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
-  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
-   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
-    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 
 
@@ -65,7 +46,7 @@ tales of wisdom gained...
 --------------------------------------------------------------
 * We came up with the idea of creating a chat bot that gives recommendations for all types of media.
 * If we have further time, we'll also make the bot do other things such as playing word games (or attempt to give bad therapy.)
-* We wrote brainstormed categories and (broad) genre classifications. 
+* We wrote brainstormed categories and (broad) genre classifications.
 * Shamelessly went around asking for recommendations as to broaden our list of recommended works.
 
 
@@ -86,7 +67,7 @@ tales of wisdom gained...
 --------------------------------------------------------------
 * Worked on the user interface & the bot being able to respond correctly
 * At the moment, the user gets as far as the menu (if they asked to talk to bot)
-* They are able to get to the game menu as well, but chats and recs are not yet functional. 
+* They are able to get to the game menu as well, but chats and recs are not yet functional.
 * QS: how can we scan the next line without doing it manually in Woo class/using booleans for everything?
 * Created UML diagrams, schedule, & plan
 ==============================================================
@@ -95,7 +76,7 @@ tales of wisdom gained...
 --------------------------------------------------------------
 * Created Chat class, and we're figuring out to incorporate it
 * Worked on fixing some of chatbot's messages (that shouldn't be popping up)
-* Created recbot chat to start incorporating the recommendations. We only got up to including the language menu. 
+* Created recbot chat to start incorporating the recommendations. We only got up to including the language menu.
 ==============================================================
 
 2022-01-20

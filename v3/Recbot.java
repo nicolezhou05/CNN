@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Recbot extends Chatbot {
 
   Scanner in = new Scanner (System.in);
-  String statement = in.nextLine();
 
   public Recbot() {
     super();
@@ -15,7 +14,13 @@ public class Recbot extends Chatbot {
     String c = "\n\t- 'Chinese' \n\t\t>press 'cn' to browse~";
     String d = "\n\t- 'Korean' \n\t\t>say 'kn' to browse~";
     String e = "\n\t- 'Japanese' \n\t\t>say 'jp' to browse~";
-    return a + b + c + d + e;
+    System.out.println( a + b + c + d + e );
+    String statement = in.nextLine();
+    return langChoose(statement);
+  }
+
+  public String langChoose(String statement) {
+    
   }
 
 }

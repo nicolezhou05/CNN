@@ -35,8 +35,6 @@ public class Woo {
     //   statement = in.nextLine();
     // }
 
-
-
     //game menu
 
     //get random responses while chatting w chitty
