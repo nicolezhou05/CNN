@@ -7,6 +7,8 @@ public class EndingLetter extends Chatbot{
 
   String mode = "";
   private int lives = 2;
+  String statement = "";
+  String lastLtr = "";
 
   //one per letter of the alphabet
   /*ArrayList A = new ArrayList<String>();
@@ -37,7 +39,7 @@ public class EndingLetter extends Chatbot{
   ArrayList<String> Z = new ArrayList<>();*/
 
   ArrayList<ArrayList<String>> dictionary = new ArrayList<ArrayList<String>>();
-
+  ArrayList used = new ArrayList<String>();
   public EndingLetter(){
     super();
     play = true;
@@ -55,55 +57,123 @@ public class EndingLetter extends Chatbot{
     String t = "\n\n\t>choose a category: 'simple'\t'places'\t'hard'";
     System.out.println(m + n + o + p + q + r + s + t);
 
-    //choose mode and fill dictionary
-    String statement = in.nextLine();
+    //choose mode
+    statement = in.nextLine();
     System.out.println(chooseMode(statement));
 
+    //create 26 arraylists in the dictionary, 1/letter
     for (int i = 0 ; i < 26 ; i++) {
       dictionary.add(new ArrayList<String>());
     }
 
+    //fill dictionary based on mode
     fillDictionary(mode);
 
-    //used words
-    ArrayList used = new ArrayList<String>();
-
-    //play
     System.out.println("\n-~-~-\ngo ahead!\n");
-    //statement = in.nextLine();
 
-    while (true){
-      statement = in.nextLine();
-      String botWord = "";
-      String lastLtr = statement.substring(statement.length()-1);
+    //used words
+    //ArrayList used = new ArrayList<String>();
 
-      //is statement used?
-      for(int i = 0; i < used.size(); i++){
-        if (statement == used.get(i)){
-          lives--;
-          System.out.println("that's been used! " + lives + " left...");
-        }
-      }
-
-      if (lastLtr == "a"){
-        if (checkSize(dictionary.get(0))){
-          System.out.println(dictionary.get(0).get(0));
-          used.add(dictionary.get(0).get(0));
-          dictionary.get(0).remove(0);
-          statement = in.nextLine();
-        } else
-        System.out.println("\noh no... i have no more words left\n\tcongrats, you won!");
-      }
-      if (lastLtr == "b"){
-        System.out.println(dictionary.get(1).get(0));
-        used.add(dictionary.get(1).get(0));
-        dictionary.get(1).remove(0);
-      }
-    }
+    playing();
 
     return mode;
   }
 
+  public void playing(){
+    statement = in.nextLine();
+    if (lives < 1){
+      System.out.println("welp, sorry friend, you have no more lives left...\n\tguess i won!");
+    } else{
+        for(int i = 0; i < used.size(); i++){
+          if (statement == used.get(i)){
+            lives--;
+            System.out.println("that's been used! " + lives + " left...");
+            playing();
+          } else{
+              used.add(statement);
+              lastLtr = statement.substring(statement.length()-1);
+          }
+        }
+        String botWord = "";
+        int a = whatLtr(lastLtr);
+        if(dictionary.get(a).size() < 1){
+          System.out.println("aw wow i lost... and you won! well done!");
+        } else {
+            botWord = dictionary.get(a).get(0);
+            for(int j = 0; j < used.size(); j++){
+              if (botWord == used.get(j)){
+                dictionary.get(a).remove(0);
+                botWord = dictionary.get(a).get(0);
+              }
+            }
+            used.add(botWord);
+            System.out.println(botWord);
+            dictionary.get(a).remove(0);
+            playing();
+        }
+      }
+
+  }
+
+  private int whatLtr(String lltr){
+    int x;
+    if (lltr == "a"){
+      x = 0;
+    } else if (lltr == "b"){
+      x = 1;
+    } else if (lltr == "c"){
+      x = 2;
+    } else if (lltr == "d"){
+      x = 3;
+    } else if (lltr == "e"){
+      x = 4;
+    } else if (lltr == "f"){
+      x = 5;
+    } else if (lltr == "g"){
+      x = 6;
+    } else if (lltr == "h"){
+      x = 7;
+    } else if (lltr == "i"){
+      x = 8;
+    } else if (lltr == "j"){
+      x = 9;
+    } else if (lltr == "k"){
+      x = 10;
+    } else if (lltr == "l"){
+      x = 11;
+    } else if (lltr == "m"){
+      x = 12;
+    } else if (lltr == "n"){
+      x = 13;
+    } else if (lltr == "o"){
+      x = 14;
+    } else if (lltr == "p"){
+      x = 15;
+    } else if (lltr == "q"){
+      x = 16;
+    } else if (lltr == "r"){
+      x = 17;
+    } else if (lltr == "s"){
+      x = 18;
+    } else if (lltr == "t"){
+      x = 19;
+    } else if (lltr == "u"){
+      x = 20;
+    } else if (lltr == "v"){
+      x = 21;
+    } else if (lltr == "w"){
+      x = 22;
+    } else if (lltr == "x"){
+      x = 23;
+    } else if (lltr == "y"){
+      x = 24;
+    } else if (lltr == "z"){
+      x = 25;
+    } else {
+      x = 0;
+    }
+    return x;
+  }
 
   public String chooseMode(String statement){
     String response = "";
@@ -129,20 +199,16 @@ public class EndingLetter extends Chatbot{
     return response;
   }
 
-//does the dictionary have words of this letter left?
-  public boolean checkSize(ArrayList<String> s){
-    if (s.size() < 1){
-      return false;
-    }
-    return true;
-  }
-
 //the massive collection of words
   public void fillDictionary(String mode){
 
     //easy mode - fill ArrayLists with these
-    if (mode == "easy"){
+    if (mode == "simple"){
       dictionary.get(0).add("apple");
+      dictionary.get(0).add("ant");
+      dictionary.get(0).add("annoy");
+      dictionary.get(0).add("almost");
+      dictionary.get(0).add("app");
       /*A.add("apple");
       A.add("ant");
       A.add("annoy");
@@ -443,6 +509,7 @@ public class EndingLetter extends Chatbot{
       Y = {"yellow", "yarn", "yawn", "yeast", "yip"};
       Z = {"zebra", "zone", "zipper", "zealous", "zoo"};*/
     }
+
     //---------------------------Keywords----------------------------
     private int findKeyword(String statement, String goal,
     int startPos)
