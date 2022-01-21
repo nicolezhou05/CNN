@@ -115,4 +115,6 @@ tales of wisdom gained...
 * For some reason, some of the java files aren't compiling with javac Woo.java
 	* instead, we've had to type: $javac *java
 	* this compiles all of the java files in the version
+* Updated EndingLetter flowchart
+* The user can sort of play EndingLetter game, but not completely
 ==============================================================
