@@ -209,18 +209,13 @@ public class EndingLetter extends Chatbot{
       dictionary.get(0).add("annoy");
       dictionary.get(0).add("almost");
       dictionary.get(0).add("app");
-      /*A.add("apple");
-      A.add("ant");
-      A.add("annoy");
-      A.add("almost");
-      A.add("app");
 
-      B.add("bunny");
-      B.add("boy");
-      B.add("ball");
-      B.add("bin");
-      B.add("board");
-
+      dictionary.get(1).add("bunny");
+      dictionary.get(1).add("boy");
+      dictionary.get(1).add("ball");
+      dictionary.get(1).add("bin");
+      dictionary.get(1).add("board");
+/*
       C.add("cat");
       C.add("corn");
       C.add("cap");
