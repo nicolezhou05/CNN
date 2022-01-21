@@ -71,6 +71,7 @@ public class Chatbot{
   public String menuResponse(String statement){
     String response = "";
     if (findKeyword(statement, "X") >= 0){
+      menu = false;
       play = false;
     }
     // else if ((statement.trim()).length() == 0){
@@ -83,11 +84,13 @@ public class Chatbot{
       games.gameMenu();
     }
     else if (findKeyword(statement, "rec") >= 0){
+      menu = false;
       System.out.println("hello hello hello!");
       Recbot recs = new Recbot();
       System.out.println(recs.languageSetting());
     }
     else if (findKeyword(statement, "chat") >= 0){
+      menu = false;
       System.out.println("\n-~-~-");
       Chat talker = new Chat();
       talker.chat();

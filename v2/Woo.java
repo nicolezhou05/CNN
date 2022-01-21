@@ -30,11 +30,11 @@ public class Woo {
       statement = in.nextLine();
     }
 
-    // while (chitty.gameResponse = true){
-    //   statement = in.nextLine();
-    //   System.out.println(chitty.GameMenu.gameMenu()); //error
-    //   statement = in.nextLine();
-    // }
+    while (chitty.gameResponse = true){
+      statement = in.nextLine();
+      System.out.println(chitty.games.gameMenu()); //error
+      statement = in.nextLine();
+    }
 
 
 

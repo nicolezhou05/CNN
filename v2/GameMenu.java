@@ -7,10 +7,11 @@ public class GameMenu extends Chatbot {
 
   public GameMenu(){
     super();
+
   }
 
   public String gameMenu(){
-    String a = "\nok! here's some interesting games to be beheald.";
+    String a = "\nok! here're some interesting games to behold.";
     String b = "\n\t- play 'guess a num'! \n\t\t>say 'num' to play~";
     String c = "\n\t- play the 'ending letter game'! \n\t\t>say 'letter' to play~";
     String d = "\n\t- create a madlib! \n\t\t>say 'madlibs' to make one~";

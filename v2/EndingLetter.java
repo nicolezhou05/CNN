@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class EndingLetter extends Chatbot{
 
   Scanner in = new Scanner (System.in);
-  String statement = in.nextLine();
+  String statement = "";
 
   String mode = "";
 
@@ -42,6 +42,7 @@ public class EndingLetter extends Chatbot{
   }
 
   public String play(){
+    //instructions
     String m = "\nalright, we'll be playing the ending letter game!";
     String n = "\n\thow to play, you ask?";
     String o = "\n\t\t>say a word in the chosen category";
@@ -51,13 +52,33 @@ public class EndingLetter extends Chatbot{
     String s = "\n\t\t>no repeats! all lowercase letters please! if you have no words, type 'none'!";
     String t = "\n\n\t>choose a category: 'simple'\t'places'\t'hard'";
     System.out.println(m + n + o + p + q + r + s + t);
+
+    //choose mode and fill dictionary
     statement = in.nextLine();
     System.out.println(chooseMode(statement));
-
-    ArrayList used = new ArrayList<String>();
     fillDictionary(mode);
-    return;
+
+    //used words
+    ArrayList used = new ArrayList<String>();
+
+    //play
+    System.out.println("\n-~-~-\ngo ahead!");
+    statement = in.nextLine();
+    String lastLtr = statement.substring(string.length()-1);
+    int lastNum = 0;
+
+    if (lastLtr == "a"){
+      System.out.println(A.get(0));
+      used.add(A.get(0));
+      A.remove(0);
+    }
+    if (lastLtr == "b"){
+      System.out.println(B.get(0));
+      B.remove(0);
+    }
+    return mode;
   }
+
 
   public String chooseMode(String statement){
     String response = "";
@@ -81,6 +102,14 @@ public class EndingLetter extends Chatbot{
       System.out.println("hm? what mode did you say?");
     }
     return response;
+  }
+
+//does the dictionary have words of this letter left?
+  public boolean checkSize(ArrayList<String> s){
+    if (s.size() < 1){
+      return false;
+    }
+    return true;
   }
 
 //the massive collection of words
