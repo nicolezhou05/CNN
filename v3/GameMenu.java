@@ -40,16 +40,17 @@ public class GameMenu extends Chatbot {
       Madlibs maddy = new Madlibs();
       System.out.println(maddy.play());
     }
-    // else if (findKeyword(statement, "hangman") >= 0){
-    //   hangman();
-    // }
-    // else
-    // {
-    //   System.out.println("not a choice buddy.");
-    // }
+    else if (findKeyword(statement, "hangman") >= 0){
+      System.out.println("\n-~-~-");
+      hangman();
+    }
+    else
+    {
+      System.out.println("not a choice buddy.");
+    }
     return response;
   }
-  
+
 //---------------------------Keywords----------------------------
     private int findKeyword(String statement, String goal,
   			int startPos)

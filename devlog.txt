@@ -100,4 +100,7 @@ tales of wisdom gained...
 * The user can sort of play EndingLetter game, but not completely
 * Created Hangman class
 * Created Hangman flowchart
+* Creation of AllGenre interface as we prepare to start writing rec.
+* Started on the recommendation generations for English media. For now, rec will go directly from choice of language to choice of
+genre rather than choice of media as to not let our files get too clustered. [Thus the path goes language --> genre --> media generation]
 ==============================================================
