@@ -10,34 +10,6 @@ public class EndingLetter extends Chatbot{
   String statement = "";
   String lastLtr = "";
 
-  //one per letter of the alphabet
-  /*ArrayList A = new ArrayList<String>();
-  ArrayList B = new ArrayList<String>();
-  ArrayList C = new ArrayList<String>();
-  ArrayList D = new ArrayList<String>();
-  ArrayList E = new ArrayList<String>();
-  ArrayList F = new ArrayList<String>();
-  ArrayList G = new ArrayList<String>();
-  ArrayList H = new ArrayList<String>();
-  ArrayList I = new ArrayList<String>();
-  ArrayList J = new ArrayList<String>();
-  ArrayList K = new ArrayList<String>();
-  ArrayList L = new ArrayList<String>();
-  ArrayList M = new ArrayList<String>();
-  ArrayList N = new ArrayList<String>();
-  ArrayList O = new ArrayList<String>();
-  ArrayList P = new ArrayList<String>();
-  ArrayList Q = new ArrayList<String>();
-  ArrayList R = new ArrayList<String>();
-  ArrayList S = new ArrayList<String>();
-  ArrayList T = new ArrayList<String>();
-  ArrayList U = new ArrayList<String>();
-  ArrayList V = new ArrayList<String>();
-  ArrayList W = new ArrayList<String>();
-  ArrayList X = new ArrayList<String>();
-  ArrayList Y = new ArrayList<String>();
-  ArrayList<String> Z = new ArrayList<>();*/
-
   ArrayList<ArrayList<String>> dictionary = new ArrayList<ArrayList<String>>();
   ArrayList used = new ArrayList<String>();
   public EndingLetter(){
@@ -71,9 +43,6 @@ public class EndingLetter extends Chatbot{
 
     System.out.println("\n-~-~-\ngo ahead!\n");
 
-    //used words
-    //ArrayList used = new ArrayList<String>();
-
     playing();
 
     return mode;
@@ -83,11 +52,13 @@ public class EndingLetter extends Chatbot{
     statement = in.nextLine();
     if (lives < 1){
       System.out.println("welp, sorry friend, you have no more lives left...\n\tguess i won!");
-    } else{
+    } else if (statement == "none"){
+        System.out.println("no words left? time to read a dictionary i guess...\nguess i won ehe");
+      }else {
         for(int i = 0; i < used.size(); i++){
           if (statement == used.get(i)){
             lives--;
-            System.out.println("that's been used! " + lives + " left...");
+            System.out.println("that's been used! " + lives + " lives left...");
             playing();
           } else{
               used.add(statement);
