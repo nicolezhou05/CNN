@@ -42,7 +42,8 @@ public class GameMenu extends Chatbot {
     }
     else if (findKeyword(statement, "hangman") >= 0){
       System.out.println("\n-~-~-");
-      hangman();
+      Hangman holden = new Hangman();
+      holden.play();
     }
     else
     {
