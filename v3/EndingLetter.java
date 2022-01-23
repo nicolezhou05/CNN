@@ -52,9 +52,10 @@ public class EndingLetter extends Chatbot{
     statement = in.nextLine();
     if (lives < 1){
       System.out.println("welp, sorry friend, you have no more lives left...\n\tguess i won!");
+      break;
     } else if (statement == "none"){
         System.out.println("no words left? time to read a dictionary i guess...\nguess i won ehe");
-      }else {
+      } else {
         for(int i = 0; i < used.size(); i++){
           if (statement == used.get(i)){
             lives--;
@@ -63,6 +64,7 @@ public class EndingLetter extends Chatbot{
           } else{
               used.add(statement);
               lastLtr = statement.substring(statement.length()-1);
+              System.out.println(used.toString());
           }
         }
         String botWord = "";
