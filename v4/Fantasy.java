@@ -9,7 +9,7 @@ public class Fantasy {
 
   //String arrays for different types of medias:
   String[] fantasyBooks = {"Six of Crows by Leigh Bardugo", "A Song of Ice and Fire series by George R. R. Martin", "The Way of Kings by Brandon Sanderson", "Ninth House by Leigh Bardugo", "In Other Lands by Sarah Rees Brennan", "Harry Potter series by JK Rowling"};
-  String[] fantasyMovies = {"Jumangji", "The Lord of the Rings", "Harry Potter", "The Princess Bride"};
+  String[] fantasyMovies = {"Jumanji", "The Lord of the Rings", "Harry Potter", "The Princess Bride", "The Hobbit"};
   String[] fantasyShows = {"Shadow and Bone", "Game of Thrones"};
   String[] fantasyWebtoon = {"Beginning After the End", "Lore Olympus", "The Wrath & the Dawn", "Avatar: The Last Airbender", "Novae"};
   String[] fantasyAnimation = {"Ratatouille", "Encanto", "The Dragon Prince"};
