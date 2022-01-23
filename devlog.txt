@@ -103,4 +103,11 @@ tales of wisdom gained...
 * Creation of AllGenre interface as we prepare to start writing rec.
 * Started on the recommendation generations for English media. For now, rec will go directly from choice of language to choice of
 genre rather than choice of media as to not let our files get too clustered. [Thus the path goes language --> genre --> media generation]
+
+
+2022-01-21
+--------------------------------------------------------------
+* Finished Hangman!!
+* Some clean-up being done (commented code being removed)
+* Recs in the oven + Ending-Letter Game in the oven
 ==============================================================
