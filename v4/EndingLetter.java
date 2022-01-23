@@ -44,22 +44,46 @@ public class EndingLetter extends Chatbot{
 
     System.out.println("\n-~-~-\ngo ahead!\n");
 
-    statement = in.nextLine();
-    used.add(statement);
-    lastLtr = statement.substring(statement.length()-1);
-    int a = whatLtr(lastLtr);
+        if (mode == "hard"){
+          statement = in.nextLine();
+          if (statement.length() < 7){
+            lives--;
+            System.out.println("not long enough...\n\t" + lives + " lives left...");
+            playHard();
+          } else {
+            statement = in.nextLine();
+            used.add(statement);
+            lastLtr = statement.substring(statement.length()-1);
+            int a = whatLtr(lastLtr);
 
-    botWord = dictionary.get(a).get(0);
-      for(int j = 0; j < used.size(); j++){
-        if (botWord == used.get(j)){
-          dictionary.get(a).remove(0);
+            botWord = dictionary.get(a).get(0);
+              for(int j = 0; j < used.size(); j++){
+                if (botWord == used.get(j)){
+                  dictionary.get(a).remove(0);
+                  botWord = dictionary.get(a).get(0);
+                }
+              }
+          }
+          playHard();
+
+        } else {
+          statement = in.nextLine();
+          used.add(statement);
+          lastLtr = statement.substring(statement.length()-1);
+          int a = whatLtr(lastLtr);
+
           botWord = dictionary.get(a).get(0);
+            for(int j = 0; j < used.size(); j++){
+              if (botWord == used.get(j)){
+                dictionary.get(a).remove(0);
+                botWord = dictionary.get(a).get(0);
+              }
+            }
+              used.add(botWord);
+              System.out.println(botWord);
+              dictionary.get(a).remove(0);
+              playing();
         }
-      }
-        used.add(botWord);
-        System.out.println(botWord);
-        dictionary.get(a).remove(0);
-        playing();
 
     return mode;
   }
@@ -102,7 +126,51 @@ public class EndingLetter extends Chatbot{
           }
         }
       }
+  }
 
+//hard mode
+  public void playHard(){
+    statement = in.nextLine();
+    if (lives < 1){
+      System.out.println("welp, sorry friend, you have no more lives left...\n\tguess i won!");
+    } else if (statement == "none"){
+        System.out.println("no words left? time to read a dictionary i guess...\nguess i won ehe");
+      } else if (statement.substring(1,1) != botWord.substring(botWord.length()-1)){
+        lives--;
+        System.out.println("hmm, your word doesn't start with the last letter of mine...\n\t" + lives + " lives left");
+      } else if (statement.length() < 7){
+        lives--;
+        System.out.println("not long enough...\n\t" + lives + "lives left...");
+        playHard();
+      } else {
+        for(int i = 0; i < used.size(); i++){
+          if (statement == used.get(i)){
+            lives--;
+            System.out.println("that's been used! " + lives + " lives left...");
+            playHard();
+          } else {
+              used.add(statement);
+              lastLtr = statement.substring(statement.length()-1);
+              String botWord = "";
+              int a = whatLtr(lastLtr);
+              if(dictionary.get(a).size() < 1){
+                System.out.println("aw wow i lost... and you won! well done!");
+              } else {
+                  botWord = dictionary.get(a).get(0);
+                  for(int j = 0; j < used.size(); j++){
+                    if (botWord == used.get(j)){
+                      dictionary.get(a).remove(0);
+                      botWord = dictionary.get(a).get(0);
+                    }
+                  }
+                  used.add(botWord);
+                  System.out.println(botWord);
+                  dictionary.get(a).remove(0);
+                  playHard();
+              }
+          }
+        }
+      }
   }
 
   private int whatLtr(String lltr){
