@@ -44,14 +44,13 @@ public class EndingLetter extends Chatbot{
 
     System.out.println("\n-~-~-\ngo ahead!\n");
 
+    statement = in.nextLine();
         if (mode == "hard"){
-          statement = in.nextLine();
           if (statement.length() < 7){
             lives--;
             System.out.println("not long enough...\n\t" + lives + " lives left...");
             playHard();
           } else {
-            statement = in.nextLine();
             used.add(statement);
             lastLtr = statement.substring(statement.length()-1);
             int a = whatLtr(lastLtr);
@@ -63,11 +62,11 @@ public class EndingLetter extends Chatbot{
                   botWord = dictionary.get(a).get(0);
                 }
               }
+              System.out.println(botWord);
           }
           playHard();
 
         } else {
-          statement = in.nextLine();
           used.add(statement);
           lastLtr = statement.substring(statement.length()-1);
           int a = whatLtr(lastLtr);
