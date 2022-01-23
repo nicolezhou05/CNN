@@ -60,7 +60,7 @@ public class EndingLetter extends Chatbot{
             lives--;
             System.out.println("that's been used! " + lives + " lives left...");
             playing();
-          } else{
+          } else {
               used.add(statement);
               lastLtr = statement.substring(statement.length()-1);
               String botWord = "";
@@ -186,25 +186,26 @@ public class EndingLetter extends Chatbot{
       dictionary.get(1).add("ball");
       dictionary.get(1).add("bin");
       dictionary.get(1).add("board");
+
+      dictionary.get(2).add("cat");
+      dictionary.get(2).add("corn");
+      dictionary.get(2).add("cap");
+      dictionary.get(2).add("coat");
+      dictionary.get(2).add("clap");
+
+      dictionary.get(3).add("dog");
+      dictionary.get(3).add("dime");
+      dictionary.get(3).add("dizzy");
+      dictionary.get(3).add("doll");
+      dictionary.get(3).add("dart");
+
+      dictionary.get(4).add("elephant");
+      dictionary.get(4).add("eat");
+      dictionary.get(4).add("envelope");
+      dictionary.get(4).add("earn");
+      dictionary.get(4).add("elevator");
+
 /*
-      C.add("cat");
-      C.add("corn");
-      C.add("cap");
-      C.add("coat");
-      C.add("clap");
-
-      D.add("dog");
-      D.add("dime");
-      D.add("dizzy");
-      D.add("doll");
-      D.add("dart");
-
-      E.add("elephant");
-      E.add("eat");
-      E.add("envelope");
-      E.add("earn");
-      E.add("elevator");
-
       F.add("fairy");
       F.add("far");
       F.add("frill");
