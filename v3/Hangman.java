@@ -15,7 +15,8 @@ public class Hangman extends Chatbot{
   Scanner in = new Scanner (System.in);
   String statement = "";
 
-  String[] dictionary = {"snake", "auspicious", "magnanimous", "computer", "science", "programming"};
+  String[] dictionary = {"snake", "auspicious", "magnanimous", "computer", "science", "programming",
+"orange", "exceptional", "serendipity", "overzealous", "exacerbate", "photograph", "acrylic"};
 
   public void play(){
 
