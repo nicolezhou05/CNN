@@ -230,6 +230,125 @@ public class EndingLetter extends Chatbot{
       dictionary.get(5).add("fast");
       dictionary.get(5).add("fork");
 
+      dictionary.get(6).add("gorilla");
+      dictionary.get(6).add("grow");
+      dictionary.get(6).add("giant");
+      dictionary.get(6).add("gas");
+      dictionary.get(6).add("giggle");
+
+      dictionary.get(7).add("horse");
+      dictionary.get(7).add("haunt");
+      dictionary.get(7).add("hiccup");
+      dictionary.get(7).add("hotel");
+      dictionary.get(7).add("happy");
+
+      dictionary.get(8).add("igloo");
+      dictionary.get(8).add("ink");
+      dictionary.get(8).add("imp");
+      dictionary.get(8).add("ill");
+      dictionary.get(8).add("indigo");
+
+      dictionary.get(9).add("joke");
+      dictionary.get(9).add("jingle");
+      dictionary.get(9).add("jig");
+      dictionary.get(9).add("journey");
+      dictionary.get(9).add("jam");
+
+      dictionary.get(10).add("kangaroo");
+      dictionary.get(10).add("kin");
+      dictionary.get(10).add("know");
+      dictionary.get(10).add("knock");
+      dictionary.get(10).add("kelp");
+
+      dictionary.get(11).add("lips");
+      dictionary.get(11).add("long");
+      dictionary.get(11).add("lion");
+      dictionary.get(11).add("lurch");
+      dictionary.get(11).add("linger");
+
+      dictionary.get(12).add("monkey");
+      dictionary.get(12).add("mat");
+      dictionary.get(12).add("mine");
+      dictionary.get(12).add("miff");
+      dictionary.get(12).add("mitten");
+
+      dictionary.get(13).add("nail");
+      dictionary.get(13).add("nap");
+      dictionary.get(13).add("nothing");
+      dictionary.get(13).add("nick");
+      dictionary.get(13).add("now");
+
+      dictionary.get(14).add("organ");
+      dictionary.get(14).add("orange");
+      dictionary.get(14).add("oats");
+      dictionary.get(14).add("oak");
+      dictionary.get(14).add("ogre");
+
+      dictionary.get(15).add("penny");
+      dictionary.get(15).add("pun");
+      dictionary.get(15).add("poll");
+      dictionary.get(15).add("prim");
+      dictionary.get(15).add("poor");
+
+      dictionary.get(16).add("queen");
+      dictionary.get(16).add("quack");
+      dictionary.get(16).add("quip");
+      dictionary.get(16).add("quite");
+      dictionary.get(16).add("quill");
+
+      dictionary.get(17).add("raisin");
+      dictionary.get(17).add("rail");
+      dictionary.get(17).add("rat");
+      dictionary.get(17).add("rip");
+      dictionary.get(17).add("rob");
+
+      dictionary.get(18).add("swoon");
+      dictionary.get(18).add("slip");
+      dictionary.get(18).add("sway");
+      dictionary.get(18).add("swift");
+      dictionary.get(18).add("slick");
+
+      dictionary.get(19).add("tire");
+      dictionary.get(19).add("turn");
+      dictionary.get(19).add("thwack");
+      dictionary.get(19).add("twist");
+      dictionary.get(19).add("temper");
+
+      dictionary.get(20).add("usher");
+      dictionary.get(20).add("umbrella");
+      dictionary.get(20).add("up");
+      dictionary.get(20).add("ultra");
+      dictionary.get(20).add("utter");
+
+      dictionary.get(21).add("velcro");
+      dictionary.get(21).add("vole");
+      dictionary.get(21).add("vain");
+      dictionary.get(21).add("vinyl");
+      dictionary.get(21).add("violet");
+
+      dictionary.get(22).add("wrist");
+      dictionary.get(22).add("water");
+      dictionary.get(22).add("wagon");
+      dictionary.get(22).add("window");
+      dictionary.get(22).add("wring");
+
+      dictionary.get(23).add("xerox");
+      dictionary.get(23).add("xenon");
+      dictionary.get(23).add("xylol");
+      dictionary.get(23).add("xerus");
+
+      dictionary.get(24).add("yellow");
+      dictionary.get(24).add("yarn");
+      dictionary.get(24).add("yip");
+      dictionary.get(24).add("yeast");
+      dictionary.get(24).add("yoke");
+
+      dictionary.get(25).add("zebra");
+      dictionary.get(25).add("zealous");
+      dictionary.get(25).add("zoo");
+      dictionary.get(25).add("zipper");
+      dictionary.get(25).add("zone")
+
     }
     else if (mode == "places"){
 
@@ -310,129 +429,135 @@ public class EndingLetter extends Chatbot{
       dictionary.get(12).add("montreal");
       dictionary.get(12).add("mongolia");
       dictionary.get(12).add("montana");
-/*
-      N.add("norway");
-      N.add("new york");
-      N.add("niger");
-      N.add("new zealand");
-      N.add("nicaragua");
 
-      O.add("ottawa");
-      O.add("oregon");
-      O.add("ohio");
-      O.add("oslo");
-      O.add("oakland");
+      dictionary.get(13).add("norway");
+      dictionary.get(13).add("new york");
+      dictionary.get(13).add("niger");
+      dictionary.get(13).add("new zealand");
+      dictionary.get(13).add("nicaragua");
 
-      P.add("princeton");
-      P.add("portland");
-      P.add("panama");
-      P.add("peru");
-      P.add("pakistan");
+      dictionary.get(14).add("ottawa");
+      dictionary.get(14).add("oregon");
+      dictionary.get(14).add("ohio");
+      dictionary.get(14).add("oslo");
+      dictionary.get(14).add("oakland");
 
-      Q.add("quebec");
-      Q.add("queens");
-      Q.add("qatar");
-      Q.add("qingdao");
-      Q.add("quezon city");
+      dictionary.get(15).add("princeton");
+      dictionary.get(15).add("portland");
+      dictionary.get(15).add("panama");
+      dictionary.get(15).add("peru");
+      dictionary.get(15).add("pakistan");
 
-      R.add("romania");
-      R.add("rwanda");
-      R.add("russia");
-      R.add("rochester");
-      R.add("richmond");
+      dictionary.get(16).add("quebec");
+      dictionary.get(16).add("queens");
+      dictionary.get(16).add("qatar");
+      dictionary.get(16).add("qingdao");
+      dictionary.get(16).add("quezon city");
 
-      S.add("spain");
-      S.add("sri lanka");
-      S.add("south africa");
-      S.add("syria");
-      S.add("serbia");
+      dictionary.get(17).add("romania");
+      dictionary.get(17).add("rwanda");
+      dictionary.get(17).add("russia");
+      dictionary.get(17).add("rochester");
+      dictionary.get(17).add("richmond");
 
-      T.add("trinidad and tobago");
-      T.add("thailand");
-      T.add("texas");
-      T.add("tajikistan");
-      T.add("tanzania");
+      dictionary.get(18).add("spain");
+      dictionary.get(18).add("sri lanka");
+      dictionary.get(18).add("south africa");
+      dictionary.get(18).add("syria");
+      dictionary.get(18).add("serbia");
 
-      U.add("ugana");
-      U.add("uruguay");
-      U.add("ukraine");
-      U.add("united arab emirates");
-      U.add("uzbekistan");
+      dictionary.get(19).add("trinidad and tobago");
+      dictionary.get(19).add("thailand");
+      dictionary.get(19).add("texas");
+      dictionary.get(19).add("tajikistan");
+      dictionary.get(19).add("tanzania");
 
-      V.add("venezuela");
-      V.add("vermont");
-      V.add("venice");
-      V.add("vietnam");
-      V.add("vancouver");
+      dictionary.get(20).add("ugana");
+      dictionary.get(20).add("uruguay");
+      dictionary.get(20).add("ukraine");
+      dictionary.get(20).add("united arab emirates");
+      dictionary.get(20).add("uzbekistan");
 
-      W.add("washington"); //not like anything starts w W anyway
+      dictionary.get(21).add("venezuela");
+      dictionary.get(21).add("vermont");
+      dictionary.get(21).add("venice");
+      dictionary.get(21).add("vietnam");
+      dictionary.get(21).add("vancouver");
 
-      X.add("xi'an"); //idk anything else
+      dictionary.get(22).add("washington");
+      dictionary.get(22).add("williamsburg");
+      dictionary.get(22).add("wuhan");
+      dictionary.get(22).add("warsaw");
+      dictionary.get(22).add("wichita");
 
-      Y.add("yellowstone");
-      Y.add("york");
-      Y.add("yugoslavia");
-      Y.add("yemen");
-      Y.add("yokohama");
+      dictionary.get(23).add("xi'an"); //idk anything else
+      dictionary.get(23).add("xalapa");
 
-      Z.add("zanzibar");
-      Z.add("zimbabwe");
-      Z.add("zambia");*/
+      dictionary.get(24).add("yellowstone");
+      dictionary.get(24).add("york");
+      dictionary.get(24).add("yugoslavia");
+      dictionary.get(24).add("yemen");
+      dictionary.get(24).add("yokohama");
+
+      dictionary.get(25).add("zanzibar");
+      dictionary.get(25).add("zimbabwe");
+      dictionary.get(25).add("zambia");
 
     } else if (mode == "hard"){
-/*      A.add("anteater");
-      A.add("assuage");
-      A.add("appropriate");
-      A.add("affluent");
-      A.add("acceleration");
 
-      B.add("bereave");
-      B.add("blasphemy");
-      B.add("blessing");
-      B.add("barnacle");
-      B.add("bashful");
+      dictionary.get(0).add("anteater");
+      dictionary.get(0).add("assuage");
+      dictionary.get(0).add("appropriate");
+      dictionary.get(0).add("affluent");
+      dictionary.get(0).add("acceleration");
 
-      C.add("caffeine");
-      C.add("capricious");
-      C.add("charisma");
-      C.add("cumbersome");
-      C.add("clandestine");
+      dictionary.get(1).add("bereave");
+      dictionary.get(1).add("blasphemy");
+      dictionary.get(1).add("blessing");
+      dictionary.get(1).add("barnacle");
+      dictionary.get(1).add("bashful");
 
-      D.add("disgusting");
-      D.add("dismorphia");
-      D.add("dominatrix");
-      D.add("deprivation");
-      D.add("disproportional");
+      dictionary.get(2).add("caffeine");
+      dictionary.get(2).add("capricious");
+      dictionary.get(2).add("charisma");
+      dictionary.get(2).add("cumbersome");
+      dictionary.get(2).add("clandestine");
 
-      E.add("edifice");
-      E.add("exacerbate");
-      E.add("ethereal");
-      E.add("envelope");
-      E.add("endorphin");
+      dictionary.get(3).add("disgusting");
+      dictionary.get(3).add("dismorphia");
+      dictionary.get(3).add("dominatrix");
+      dictionary.get(3).add("deprivation");
+      dictionary.get(3).add("disproportional");
 
-      F.add("fantasy");
-      F.add("frolick");
-      F.add("ferocious");
-      F.add("feminine");
-      F.add("frantic");
+      dictionary.get(4).add("edifice");
+      dictionary.get(4).add("exacerbate");
+      dictionary.get(4).add("ethereal");
+      dictionary.get(4).add("envelope");
+      dictionary.get(4).add("endorphin");
 
-      G.add("grateful");
-      G.add("gastrology");
-      G.add("gorgeous");
-      G.add("graphite");
-      G.add("garbage");
+      dictionary.get(5).add("fantasy");
+      dictionary.get(5).add("frolick");
+      dictionary.get(5).add("ferocious");
+      dictionary.get(5).add("feminine");
+      dictionary.get(5).add("frantic");
 
-      H.add("holistic");
-      H.add("heathen");
-      H.add("historical");
-      H.add("haphazardous");
-      H.add("hysteria");
+      dictionary.get(6).add("grateful");
+      dictionary.get(6).add("gastrology");
+      dictionary.get(6).add("gorgeous");
+      dictionary.get(6).add("graphite");
+      dictionary.get(6).add("garbage");
 
-      I.add("incredible");
-      I.add("improbable");
-      I.add("illness");
-      I.add("intrepid");
-      I.add("ingenuine");
+      dictionary.get(7).add("holistic");
+      dictionary.get(7).add("heathen");
+      dictionary.get(7).add("historical");
+      dictionary.get(7).add("haphazardous");
+      dictionary.get(7).add("hysteria");
+
+      dictionary.get(8).add("incredible");
+      dictionary.get(8).add("improbable");
+      dictionary.get(8).add("illness");
+      dictionary.get(8).add("intrepid");
+      dictionary.get(8).add("ingenuine");
 
       J.add("juxtapose");
       J.add("jaggary");
@@ -468,33 +593,7 @@ public class EndingLetter extends Chatbot{
 */
     }
 
-    /*
-      A = {"apple", "ant", "annoy", "almost", "app"};
-      B = {"bunny", "boy", "ball", "bin", "board"};
-      C = {"cat", "corn", "cap", "coat", "clap"};
-      D = {"dog", "dime", "dizzy", "doll", "dart"};
-      E = {"elephant", "eat", "envelope", "earn", "elevator"};
-      F = {"fairy", "far", "frill", "fast", "fork"};
-      G = {"gorilla", "gourd", "grin", "greet", "grow"};
-      H = {"happy", "horn", "hat", "hiccup", "hotel"};
-      I = {"igloo", "ill", "ink", "indigo", "imp"};
-      J = {"jump", "joke", "jog", "jam", "juggle"};
-      K = {"kangaroo", "kite", "kin", "know", "knock"};
-      L = {"lion", "little", "lie", "lips", "large"};
-      M = {"monkey", "martian", "mat", "most", "mine"};
-      N = {"nap", "nothing", "nail", "nick", "now"};
-      O = {"orange", "open", "organ", "oak", "oats"};
-      P = {"penny", "pun", "please", "purse", "prim"};
-      Q = {"queen", "quiet", "quip", "quack", "quill"};
-      R = {"raisin", "run", "rail", "rat", "rant"};
-      S = {"slip", "snake", "sway", "swoon", "swift"};
-      T = {"tire", "try", "thwack", "twist", "trip"};
-      U = {"under", "up", "usher", "utter", "umbrella"};
-      V = {"vinyl", "vain", "vole", "veer", "violet"};
-      W = {"wrist", "wine", "writ", "waste", "water"};
-      X = {"xerox", "xenon", "xray", "xylol", "xerus"};
-      Y = {"yellow", "yarn", "yawn", "yeast", "yip"};
-      Z = {"zebra", "zone", "zipper", "zealous", "zoo"};*/
+
     }
 
     //---------------------------Keywords----------------------------
