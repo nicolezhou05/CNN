@@ -9,6 +9,7 @@ public class EndingLetter extends Chatbot{
   private int lives = 2;
   String statement = "";
   String lastLtr = "";
+  String botWord = "";
 
   ArrayList<ArrayList<String>> dictionary = new ArrayList<ArrayList<String>>();
   ArrayList used = new ArrayList<String>();
@@ -43,7 +44,22 @@ public class EndingLetter extends Chatbot{
 
     System.out.println("\n-~-~-\ngo ahead!\n");
 
-    playing();
+    statement = in.nextLine();
+    used.add(statement);
+    lastLtr = statement.substring(statement.length()-1);
+    int a = whatLtr(lastLtr);
+
+    botWord = dictionary.get(a).get(0);
+      for(int j = 0; j < used.size(); j++){
+        if (botWord == used.get(j)){
+          dictionary.get(a).remove(0);
+          botWord = dictionary.get(a).get(0);
+        }
+      }
+        used.add(botWord);
+        System.out.println(botWord);
+        dictionary.get(a).remove(0);
+        playing();
 
     return mode;
   }
@@ -54,6 +70,9 @@ public class EndingLetter extends Chatbot{
       System.out.println("welp, sorry friend, you have no more lives left...\n\tguess i won!");
     } else if (statement == "none"){
         System.out.println("no words left? time to read a dictionary i guess...\nguess i won ehe");
+      } else if (statement.substring(1,1) != botWord.substring(botWord.length()-1)){
+        lives--;
+        System.out.println("hmm, your word doesn't start with the last letter of mine...\n\t" + lives + " lives left");
       } else {
         for(int i = 0; i < used.size(); i++){
           if (statement == used.get(i)){
@@ -205,93 +224,92 @@ public class EndingLetter extends Chatbot{
       dictionary.get(4).add("earn");
       dictionary.get(4).add("elevator");
 
-/*
-      F.add("fairy");
-      F.add("far");
-      F.add("frill");
-      F.add("fast");
-      F.add("fork");*/
+      dictionary.get(5).add("fairy");
+      dictionary.get(5).add("far");
+      dictionary.get(5).add("frill");
+      dictionary.get(5).add("fast");
+      dictionary.get(5).add("fork");
 
     } else if (mode == "places"){
 
-/*      A.add("arkansas");
-      A.add("alabama");
-      A.add("arkansas");
-      A.add("algeria");
-      A.add("australia");
+      dictionary.get(0).add("arkansas");
+      dictionary.get(0).add("alabama");
+      dictionary.get(0).add("arkansas");
+      dictionary.get(0).add("algeria");
+      dictionary.get(0).add("australia");
 
-      B.add("bohemia");
-      B.add("brooklyn");
-      B.add("botswana");
-      B.add("bombay");
-      B.add("beijing");
+      dictionary.get(1).add("bohemia");
+      dictionary.get(1).add("brooklyn");
+      dictionary.get(1).add("botswana");
+      dictionary.get(1).add("bombay");
+      dictionary.get(1).add("beijing");
 
-      C.add("colombo");
-      C.add("china");
-      C.add("connecticut");
-      C.add("chile");
-      C.add("cambridge");
+      dictionary.get(2).add("colombo");
+      dictionary.get(2).add("china");
+      dictionary.get(2).add("connecticut");
+      dictionary.get(2).add("chile");
+      dictionary.get(2).add("cambridge");
 
-      D.add("denmark");
-      D.add("denver");
-      D.add("delaware");
-      D.add("dubai");
-      D.add("dhaka");
+      dictionary.get(3).add("denmark");
+      dictionary.get(3).add("denver");
+      dictionary.get(3).add("delaware");
+      dictionary.get(3).add("dubai");
+      dictionary.get(3).add("dhaka");
 
-      E.add("elmhurst");
-      E.add("europe");
-      E.add("ethiopia");
-      E.add("egypt");
-      E.add("ecuador");
+      dictionary.get(4).add("elmhurst");
+      dictionary.get(4).add("europe");
+      dictionary.get(4).add("ethiopia");
+      dictionary.get(4).add("egypt");
+      dictionary.get(4).add("ecuador");
 
-      F.add("finland");
-      F.add("far rockaway");
-      F.add("florence");
-      F.add("france");
-      F.add("fiji");
+      dictionary.get(5).add("finland");
+      dictionary.get(5).add("far rockaway");
+      dictionary.get(5).add("florence");
+      dictionary.get(5).add("france");
+      dictionary.get(5).add("fiji");
 
-      G.add("germany");
-      G.add("goa");
-      G.add("ghana");
-      G.add("guatemala");
-      G.add("greece");
+      dictionary.get(6).add("germany");
+      dictionary.get(6).add("goa");
+      dictionary.get(6).add("ghana");
+      dictionary.get(6).add("guatemala");
+      dictionary.get(6).add("greece");
 
-      H.add("holland");
-      H.add("houston");
-      H.add("huntington");
-      H.add("haiti");
-      H.add("hungary");
+      dictionary.get(7).add("holland");
+      dictionary.get(7).add("houston");
+      dictionary.get(7).add("huntington");
+      dictionary.get(7).add("haiti");
+      dictionary.get(7).add("hungary");
 
-      I.add("italy");
-      I.add("india");
-      I.add("idaho");
-      I.add("iceland");
-      I.add("ireland");
+      dictionary.get(8).add("italy");
+      dictionary.get(8).add("india");
+      dictionary.get(8).add("idaho");
+      dictionary.get(8).add("iceland");
+      dictionary.get(8).add("ireland");
 
-      J.add("jerusalem");
-      J.add("japan");
-      J.add("jamaica");
-      J.add("jordan");
-      J.add("jinzhou");
+      dictionary.get(9).add("jerusalem");
+      dictionary.get(9).add("japan");
+      dictionary.get(9).add("jamaica");
+      dictionary.get(9).add("jordan");
+      dictionary.get(9).add("jinzhou");
 
-      K.add("kazakhstan");
-      K.add("korea");
-      K.add("kuwait");
-      K.add("kyrgystan");
-      K.add("kenya");
+      dictionary.get(10).add("kazakhstan");
+      dictionary.get(10).add("korea");
+      dictionary.get(10).add("kuwait");
+      dictionary.get(10).add("kyrgystan");
+      dictionary.get(10).add("kenya");
 
-      L.add("lebanon");
-      L.add("lithuania");
-      L.add("libya");
-      L.add("liberia");
-      L.add("laos");
+      dictionary.get(11).add("lebanon");
+      dictionary.get(11).add("lithuania");
+      dictionary.get(11).add("libya");
+      dictionary.get(11).add("liberia");
+      dictionary.get(11).add("laos");
 
-      M.add("mexico");
-      M.add("morocco");
-      M.add("montreal");
-      M.add("mongolia");
-      M.add("montana");
-
+      dictionary.get(12).add("mexico");
+      dictionary.get(12).add("morocco");
+      dictionary.get(12).add("montreal");
+      dictionary.get(12).add("mongolia");
+      dictionary.get(12).add("montana");
+/*
       N.add("norway");
       N.add("new york");
       N.add("niger");
@@ -359,6 +377,7 @@ public class EndingLetter extends Chatbot{
       Z.add("zanzibar");
       Z.add("zimbabwe");
       Z.add("zambia");*/
+
     } else if (mode == "hard"){
 /*      A.add("anteater");
       A.add("assuage");
