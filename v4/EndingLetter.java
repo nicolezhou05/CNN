@@ -230,7 +230,8 @@ public class EndingLetter extends Chatbot{
       dictionary.get(5).add("fast");
       dictionary.get(5).add("fork");
 
-    } else if (mode == "places"){
+    }
+    else if (mode == "places"){
 
       dictionary.get(0).add("arkansas");
       dictionary.get(0).add("alabama");
