@@ -589,7 +589,74 @@ public class EndingLetter extends Chatbot{
       dictionary.get(13).add("neophyte");
       dictionary.get(13).add("nativism");
 
-      O.add("ostentious");*/
+      dictionary.get(14).add("ostentious");
+      dictionary.get(14).add("overzealous");
+      dictionary.get(14).add("opulent");
+      dictionary.get(14).add("ostracize");
+      dictionary.get(14).add("ostrich");
+
+      dictionary.get(15).add("petulent");
+      dictionary.get(15).add("principal");
+      dictionary.get(15).add("primary");
+      dictionary.get(15).add("princess");
+      dictionary.get(15).add("pendulum");
+
+      dictionary.get(16).add("quintessential");
+      dictionary.get(16).add("quartet");
+      dictionary.get(16).add("quarrel");
+      dictionary.get(16).add("queendom");
+      dictionary.get(16).add("quadruple");
+
+      dictionary.get(17).add("rhombus");
+      dictionary.get(17).add("resplendent");
+      dictionary.get(17).add("reputation");
+      dictionary.get(17).add("rhinocerous");
+      dictionary.get(17).add("rickety");
+
+      dictionary.get(18).add("slippery");
+      dictionary.get(18).add("slender");
+      dictionary.get(18).add("squabble");
+      dictionary.get(18).add("stereotype");
+      dictionary.get(18).add("shimmery");
+
+      dictionary.get(19).add("tranquil");
+      dictionary.get(19).add("teasing");
+      dictionary.get(19).add("tasteful");
+      dictionary.get(19).add("trombone");
+      dictionary.get(19).add("tomorrow");
+
+      dictionary.get(20).add("ululation");
+      dictionary.get(20).add("underhand");
+      dictionary.get(20).add("upbringing");
+      dictionary.get(20).add("unemploy");
+      dictionary.get(20).add("untruth");
+
+      dictionary.get(21).add("vindicate");
+      dictionary.get(21).add("voluptous");
+      dictionary.get(21).add("villain");
+      dictionary.get(21).add("voracious");
+      dictionary.get(21).add("vacancy");
+
+      dictionary.get(22).add("wallowing");
+      dictionary.get(22).add("wriggle");
+      dictionary.get(22).add("wisteria");
+      dictionary.get(22).add("waistband");
+      dictionary.get(22).add("wheelbarrow");
+
+      dictionary.get(23).add("xylophone");
+      dictionary.get(23).add("xenograft");
+
+      dictionary.get(24).add("yearbook");
+      dictionary.get(24).add("yearning");
+      dictionary.get(24).add("youngest");
+      dictionary.get(24).add("yardstick");
+      dictionary.get(24).add("yellowing");
+
+      dictionary.get(25).add("zoologist");
+      dictionary.get(25).add("zirconium");
+      dictionary.get(25).add("zeppelin");
+      dictionary.get(25).add("zeitgeist");
+      dictionary.get(25).add("zombified");
     }
 
 
