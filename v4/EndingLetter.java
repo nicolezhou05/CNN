@@ -559,35 +559,35 @@ public class EndingLetter extends Chatbot{
       dictionary.get(8).add("intrepid");
       dictionary.get(8).add("ingenuine");
 
-      /*J.add("juxtapose");
-      J.add("jaggary");
-      J.add("jacquard");
-      J.add("jadedly");
-      J.add("jellyfish");
+      dictionary.get(9).add("juxtapose");
+      dictionary.get(9).add("jaggary");
+      dictionary.get(9).add("jacquard");
+      dictionary.get(9).add("jadedly");
+      dictionary.get(9).add("jellyfish");
 
-      K.add("kayaking");
-      K.add("knowledge");
-      K.add("kangaroo");
-      K.add("kerchief");
-      K.add("kidnapper");
+      dictionary.get(10).add("kayaking");
+      dictionary.get(10).add("knowledge");
+      dictionary.get(10).add("kangaroo");
+      dictionary.get(10).add("kerchief");
+      dictionary.get(10).add("kidnapper");
 
-      L.add("luminescence");
-      L.add("literally");
-      L.add("ladybug");
-      L.add("liability");
-      L.add("lacquer");
+      dictionary.get(11).add("luminescence");
+      dictionary.get(11).add("literally");
+      dictionary.get(11).add("ladybug");
+      dictionary.get(11).add("liability");
+      dictionary.get(11).add("lacquer");
 
-      M.add("minstrel");
-      M.add("miserable");
-      M.add("mythical");
-      M.add("macabre");
-      M.add("mystery");
+      dictionary.get(12).add("minstrel");
+      dictionary.get(12).add("miserable");
+      dictionary.get(12).add("mythical");
+      dictionary.get(12).add("macabre");
+      dictionary.get(12).add("mystery");
 
-      N.add("necromancer");
-      N.add("narwhal");
-      N.add("nebulous");
-      N.add("neophyte");
-      N.add("nativism");
+      dictionary.get(13).add("necromancer");
+      dictionary.get(13).add("narwhal");
+      dictionary.get(13).add("nebulous");
+      dictionary.get(13).add("neophyte");
+      dictionary.get(13).add("nativism");
 
       O.add("ostentious");*/
     }
@@ -596,48 +596,34 @@ public class EndingLetter extends Chatbot{
     }
 
     //---------------------------Keywords----------------------------
-    private int findKeyword(String statement, String goal,
-    int startPos)
-    {
+    private int findKeyword(String statement, String goal, int startPos) {
       String phrase = statement.trim().toLowerCase();
       goal = goal.toLowerCase();
 
       int psn = phrase.indexOf(goal, startPos);
 
-      while (psn >= 0)
-      {
-
+      while (psn >= 0) {
         String before = " ", after = " ";
-        if (psn > 0)
-        {
+        if (psn > 0) {
           before = phrase.substring(psn - 1, psn);
         }
-        if (psn + goal.length() < phrase.length())
-        {
+        if (psn + goal.length() < phrase.length()) {
           after = phrase.substring(
           psn + goal.length(),
           psn + goal.length() + 1);
         }
 
-        if (((before.compareTo("a") < 0) || (before
-        .compareTo("z") > 0)) // before is not a
-        // letter
-        && ((after.compareTo("a") < 0) || (after
-        .compareTo("z") > 0)))
-        {
+        if (((before.compareTo("a") < 0) || (before.compareTo("z") > 0)) //before is not a letter
+        && ((after.compareTo("a") < 0) || (after.compareTo("z") > 0)))  {
           return psn;
         }
-
         psn = phrase.indexOf(goal, psn + 1);
-
       }
-
       return -1;
     }
 
 
-    private int findKeyword(String statement, String goal)
-    {
+    private int findKeyword(String statement, String goal) {
       return findKeyword(statement, goal, 0);
     }
 }
