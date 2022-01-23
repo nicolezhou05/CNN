@@ -32,12 +32,18 @@ public class Recbot extends Chatbot {
     }
     else if (findKeyword(statement, "cn") >= 0){
       System.out.println("\n-~-~-");
+      CnFiles rec1 = new CnFiles();
+      rec1.cnGenres();
     }
     else if (findKeyword(statement, "kn") >= 0){
       System.out.println("\n-~-~-");
+      KnFiles rec2 = new KnFiles();
+      rec2.knGenres();
     }
     else if (findKeyword(statement, "jp") >= 0){
       System.out.println("\n-~-~-");
+      JpFiles rec3 = new JpFiles();
+      rec3.jpGenres();
     }
     else
     {

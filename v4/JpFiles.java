@@ -1,15 +1,10 @@
 import java.util.Scanner;
-import java.util.Random;
-import java.util.Arrays;
 
-public class EngFiles{
+public class JpFiles{
 
   Scanner in = new Scanner (System.in);
-  String selection = "";
-  String[] music = {"Alec Benjamin", "The Neighborhood", "Twenty One Pilots", "Conan Gray"};
 
-
-  public String engGenres() {
+  public String jpGenres() {
     String a = "which genre might behoove you on this day?";
     String b = "\n\t- 'Fantasy' \n\t\t>say 'fantasy' for futher exploration";
     String c = "\n\t- 'Science Fiction' \n\t\t>say 'scifi' for futher exploration";
@@ -20,10 +15,10 @@ public class EngFiles{
     String h = "\n\t- Or, would you like to listen to new music today? \n\t> if so, say 'music'";
     System.out.println( a + b + c + d + e + f + g + h);
     String statement = in.nextLine();
-    return genreEng(statement);
+    return genreJp(statement);
   }
 
-  public String genreEng(String statement) {
+  public String genreJp(String statement) {
     String response = "";
     if ((statement.trim()).length() == 0){
       response = "which genre fits your mood today?";
@@ -31,38 +26,33 @@ public class EngFiles{
     }
     else if (findKeyword(statement, "fantasy") >= 0){
       System.out.println("\n-~-~-");
-      Fantasy med0 = new Fantasy();
+      JpFantasy med0 = new JpFantasy();
       med0.fMedia();
     }
     else if (findKeyword(statement, "scifi") >= 0){
       System.out.println("\n-~-~-");
-      Scifi med1 = new Scifi();
+      JpScifi med1 = new JpScifi();
       med1.sMedia();
     }
     else if (findKeyword(statement, "historical") >= 0){
       System.out.println("\n-~-~-");
-      Historical med2 = new Historical();
-      med2.hMedia();
+      System.out.println("Truth be told, we don't have any. If you know any good ones, send them our way!!");
     }
     else if (findKeyword(statement, "realistic") >= 0){
       System.out.println("\n-~-~-");
-      Realistic med3 = new Realistic();
-      med3.rMedia();
+      System.out.println("Truth be told, we don't have any. If you know any good ones, send them our way!!");
     }
     else if (findKeyword(statement, "thrills") >= 0){
       System.out.println("\n-~-~-");
-      Thriller med4 = new Thriller();
-      med4.tMedia();
+      System.out.println("Truth be told, we don't have any. If you know any good ones, send them our way!!");
     }
     else if (findKeyword(statement, "help") >= 0){
       System.out.println("\n-~-~-");
-      Selfhelp med5 = new Selfhelp();
-      med5.sMedia();
+      System.out.println("Truth be told, we don't have any. If you know any good ones, send them our way!!");
     }
     else if (findKeyword(statement, "music") >= 0){
       System.out.println("\n-~-~-");
-      System.out.println("Drumroll please... \nAnd your selection is: " + musicGeneration());
-      System.out.println("Enjoy!!");
+      System.out.println("Truth be told, we don't have any. If you know any good ones, send them our way!!");
     }
     else
     {
@@ -70,13 +60,6 @@ public class EngFiles{
     }
     return response;
   }
-
-//--------------------Music----------------------
-public String musicGeneration() {
-  Random r = new Random();
-  selection = music[r.nextInt(music.length)];
-  return selection;
-}
 
 //--------------------Keywords--------------------
   private int findKeyword(String statement, String goal,

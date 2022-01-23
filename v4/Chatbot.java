@@ -1,4 +1,4 @@
-public class Chatbot{
+public class Chatbot {
 
 //---------------------------Variables-----------------------------
   //bot's name

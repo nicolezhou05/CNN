@@ -28,22 +28,7 @@ public class Woo {
     while (chitty.menu == true){
       System.out.println(chitty.menuResponse(statement));
     }
-
-    // while (chitty.gameResponse = true){
-    //   statement = in.nextLine();
-    //   System.out.println(chitty.games.gameMenu()); //error
-    //   statement = in.nextLine();
-    // }
-
-    //game menu
-
-    //get random responses while chatting w chitty
-		// while (!statement.equals("bye") && chitty.play == true && chitty.chat == true)
-		// {
-		// 	System.out.println (chitty.getResponse(statement));
-		// 	statement = in.nextLine();
-		// }
-
+    
   }
 
 }
