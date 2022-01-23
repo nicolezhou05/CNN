@@ -44,10 +44,6 @@ public class Chatbot {
       menu = true;
       System.out.println(menu());
     }
-    else if (findKeyword(statement, "X") >= 0)
-    {
-      response = "\nbuh bye...";
-    }
     else {
       response = "yes or no?";
     }
@@ -67,11 +63,7 @@ public class Chatbot {
   //menu responses
   public String menuResponse(String statement){
     String response = "";
-    if (findKeyword(statement, "X") >= 0){
-      menu = false;
-      play = false;
-    }
-    else if ((statement.trim()).length() == 0){
+    if ((statement.trim()).length() == 0){
 			response = "choose something, friend of " + name + ".";
 		}
     else if (findKeyword(statement, "game") >= 0){
@@ -109,6 +101,25 @@ public class Chatbot {
       {
         response = "oh?";
       }
+      else if (findKeyword(statement, "cat") >= 0 || findKeyword(statement, "dog") >= 0
+      || findKeyword(statement, "rat") >= 0 || findKeyword(statement, "bird") >= 0
+      || findKeyword(statement, "hamster") >= 0)
+      {
+        response = "tell me about your pets! i love animals hehe";
+      }
+      else if (findKeyword(statement, "red") >= 0 || findKeyword(statement, "orange") >= 0
+      || findKeyword(statement, "yellow") >= 0 || findKeyword(statement, "green") >= 0
+      || findKeyword(statement, "blue") >= 0 || findKeyword(statement, "indigo") >= 0
+      || findKeyword(statement, "violet") >= 0 || findKeyword(statement, "pink") >= 0
+      || findKeyword(statement, "black") >= 0 || findKeyword(statement, "white") >= 0
+      || findKeyword(statement, "gray") >= 0 || findKeyword(statement, "beige") >= 0)
+      {
+        response = "whoa, that's my second favorite color! \n\tmy absolute favorite is cerulean though...\n\n\t\t...\n\tit reminds me of you, friend";
+      }
+      else if (findKeyword(statement, "friend") >= 0)
+      {
+        response = "hmm... tell me more about your other friend " + name;
+      }
       else if (findKeyword(statement, "?") >= 0)
       {
         response = "not sure I know how to answer..."; //only works if '?' isn't attached to a word hm
@@ -118,16 +129,99 @@ public class Chatbot {
       {
         response = "want to talk about something else?";
       }
-      else
-      {
-        response = getRandomResponse();
-      }
+      else if (findKeyword(statement, "I want to", 0) >= 0)
+  		{
+  			response = transformIWantToStatement(statement);
+  		}
+
+  		else if (findKeyword(statement, "I want", 0) >= 0)
+  		{
+  			response = transformIWantStatement(statement);
+  		}
+  		else
+  		{
+  			// Look for a two word (you <something> me)
+  			// pattern
+  			int psn = findKeyword(statement, "you", 0);
+  			int psn1 = findKeyword(statement, "I", 0);
+
+  			if (psn >= 0
+  					&& findKeyword(statement, "me", psn) >= 0)
+  			{
+  				response = transformYouMeStatement(statement);
+  			}
+
+  			else if (psn1 >= 0
+  					&& findKeyword(statement, "you", psn) >= 0)
+  					{
+  						response = transformIYouStatement(statement);
+  					}
+  			else
+  			{
+  				response = getRandomResponse(statement);
+  			}
+  		}
       return response;
     }
 
+//specific responses from magpie
+    private String transformIWantToStatement(String statement){
+  		statement = statement.trim();
+  		String lastChar = statement.substring(statement
+  				.length() - 1);
+  		if (lastChar.equals(".")){
+  			statement = statement.substring(0, statement.length() - 1);
+  		}
+  		int psn = findKeyword (statement, "I want to", 0);
+  		String restOfStatement = statement.substring(psn + 9).trim();
+  		return "What would it mean to " + restOfStatement + "?";
+  	}
+
+  	private String transformIWantStatement(String statement){
+  		statement = statement.trim();
+  		String lastChar = statement.substring(statement.length() - 1);
+  		if (lastChar.equals(".")){
+  			statement = statement.substring(0, statement.length() - 1);
+  		}
+  		int psn = findKeyword (statement, "I want", 0);
+  		String restOfStatement = statement.substring(psn + 7).trim();
+  		return "um would " + restOfStatement + " really be better than a pat on the head from me?";
+  	}
+
+  	private String transformYouMeStatement(String statement){
+  		statement = statement.trim();
+  		String lastChar = statement.substring(statement.length() - 1);
+  		if (lastChar.equals(".")){
+  			statement = statement.substring(0, statement
+  					.length() - 1);
+  		}
+
+  		int psnOfYou = findKeyword (statement, "you", 0);
+  		int psnOfMe = findKeyword (statement, "me", psnOfYou + 3);
+
+  		String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe).trim();
+  		return "pfft what makes you think that i " + restOfStatement + " you?";
+  	}
+
+  	private String transformIYouStatement(String statement) {
+  		statement = statement.trim();
+  		String lastChar = statement.substring(statement.length() - 1);
+  		if (lastChar.equals(".")){
+  			statement = statement.substring(0, statement
+  					.length() - 1);
+  		}
+
+  		int psnOfYou = findKeyword (statement, "I", 0);
+  		int psnOfMe = findKeyword (statement, "you", psnOfYou + 2);
+
+  		String restOfStatement = statement.substring(psnOfYou + 2, psnOfMe).trim();
+  		return "huh, why do you " + restOfStatement + " me?";
+  	}
+
+
     //random response
-    public String getRandomResponse(){
-      final int NUMBER_OF_RESPONSES = 3;
+    public String getRandomResponse(String statement){
+      final int NUMBER_OF_RESPONSES = 6;
       double r = Math.random();
       int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
       String response = "";
@@ -143,6 +237,18 @@ public class Chatbot {
       else if (whichResponse == 2)
       {
         response = "really?";
+      }
+      else if (whichResponse == 3)
+      {
+        response = statement + " you say...\n\n\t.....\n....\n\t\t...";
+      }
+      else if (whichResponse == 4)
+      {
+        response = "uh what-";
+      }
+      else if (whichResponse == 5)
+      {
+        response = "oh! i get it!";
       }
       return response;
     }

@@ -347,7 +347,7 @@ public class EndingLetter extends Chatbot{
       dictionary.get(25).add("zealous");
       dictionary.get(25).add("zoo");
       dictionary.get(25).add("zipper");
-      dictionary.get(25).add("zone")
+      dictionary.get(25).add("zone");
 
     }
     else if (mode == "places"){
@@ -559,7 +559,7 @@ public class EndingLetter extends Chatbot{
       dictionary.get(8).add("intrepid");
       dictionary.get(8).add("ingenuine");
 
-      J.add("juxtapose");
+      /*J.add("juxtapose");
       J.add("jaggary");
       J.add("jacquard");
       J.add("jadedly");
@@ -589,8 +589,7 @@ public class EndingLetter extends Chatbot{
       N.add("neophyte");
       N.add("nativism");
 
-      O.add("ostentious");
-*/
+      O.add("ostentious");*/
     }
 
 
