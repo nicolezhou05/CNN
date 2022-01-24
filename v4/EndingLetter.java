@@ -45,7 +45,7 @@ public class EndingLetter extends Chatbot{
     System.out.println("\n-~-~-\ngo ahead!\n");
 
     statement = in.nextLine();
-        if (mode == "hard"){
+        if (mode.equals("hard")){
           if (statement.length() < 7){
             lives--;
             System.out.println("not long enough...\n\t" + lives + " lives left...");
@@ -57,14 +57,16 @@ public class EndingLetter extends Chatbot{
 
             botWord = dictionary.get(a).get(0);
               for(int j = 0; j < used.size(); j++){
-                if (botWord == used.get(j)){
+                if (botWord.equals(used.get(j))){
                   dictionary.get(a).remove(0);
                   botWord = dictionary.get(a).get(0);
                 }
               }
+              used.add(botWord);
               System.out.println(botWord);
+              dictionary.get(a).remove(0);
+              playHard();
           }
-          playHard();
 
         } else {
           used.add(statement);
@@ -73,7 +75,7 @@ public class EndingLetter extends Chatbot{
 
           botWord = dictionary.get(a).get(0);
             for(int j = 0; j < used.size(); j++){
-              if (botWord == used.get(j)){
+              if (botWord.equals(used.get(j))){
                 dictionary.get(a).remove(0);
                 botWord = dictionary.get(a).get(0);
               }
@@ -88,31 +90,36 @@ public class EndingLetter extends Chatbot{
   }
 
   public void playing(){
-    statement = in.nextLine();
     if (lives < 1){
       System.out.println("welp, sorry friend, you have no more lives left...\n\tguess i won!");
-    } else if (statement == "none"){
+      return;
+    }
+    statement = in.nextLine();
+    if (statement.equals("none")){
         System.out.println("no words left? time to read a dictionary i guess...\nguess i won ehe");
-      } else if (statement.substring(1,1) != botWord.substring(botWord.length()-1)){
+      } else if (!statement.substring(0,1).equals(botWord.substring(botWord.length()-1))){
         lives--;
+        used.add(statement);
         System.out.println("hmm, your word doesn't start with the last letter of mine...\n\t" + lives + " lives left");
+        playing();
       } else {
         for(int i = 0; i < used.size(); i++){
-          if (statement == used.get(i)){
+          if (statement.equals(used.get(i))){
             lives--;
             System.out.println("that's been used! " + lives + " lives left...");
             playing();
-          } else {
+          }
+        }
               used.add(statement);
               lastLtr = statement.substring(statement.length()-1);
-              String botWord = "";
+              botWord = "";
               int a = whatLtr(lastLtr);
               if(dictionary.get(a).size() < 1){
                 System.out.println("aw wow i lost... and you won! well done!");
               } else {
                   botWord = dictionary.get(a).get(0);
                   for(int j = 0; j < used.size(); j++){
-                    if (botWord == used.get(j)){
+                    if (botWord.equals(used.get(j))){
                       dictionary.get(a).remove(0);
                       botWord = dictionary.get(a).get(0);
                     }
@@ -123,41 +130,44 @@ public class EndingLetter extends Chatbot{
                   playing();
               }
           }
-        }
-      }
   }
 
 //hard mode
   public void playHard(){
-    statement = in.nextLine();
     if (lives < 1){
       System.out.println("welp, sorry friend, you have no more lives left...\n\tguess i won!");
-    } else if (statement == "none"){
+      return;
+    }
+    statement = in.nextLine();
+    if (statement.length() < 7){
+      lives--;
+      System.out.println("hmm sorry mi amigo, not long enough...\n\t" + lives + " lives left...");
+      playHard();
+    } else if (statement.equals("none")){
         System.out.println("no words left? time to read a dictionary i guess...\nguess i won ehe");
-      } else if (statement.substring(1,1) != botWord.substring(botWord.length()-1)){
+      } else if (!statement.substring(0,1).equals(botWord.substring(botWord.length()-1))){
         lives--;
+        used.add(statement);
         System.out.println("hmm, your word doesn't start with the last letter of mine...\n\t" + lives + " lives left");
-      } else if (statement.length() < 7){
-        lives--;
-        System.out.println("not long enough...\n\t" + lives + "lives left...");
         playHard();
       } else {
         for(int i = 0; i < used.size(); i++){
-          if (statement == used.get(i)){
+          if (statement.equals(used.get(i))){
             lives--;
             System.out.println("that's been used! " + lives + " lives left...");
             playHard();
-          } else {
+          }
+        }
               used.add(statement);
               lastLtr = statement.substring(statement.length()-1);
-              String botWord = "";
+              botWord = "";
               int a = whatLtr(lastLtr);
               if(dictionary.get(a).size() < 1){
                 System.out.println("aw wow i lost... and you won! well done!");
               } else {
                   botWord = dictionary.get(a).get(0);
                   for(int j = 0; j < used.size(); j++){
-                    if (botWord == used.get(j)){
+                    if (botWord.equals(used.get(j))){
                       dictionary.get(a).remove(0);
                       botWord = dictionary.get(a).get(0);
                     }
@@ -168,63 +178,61 @@ public class EndingLetter extends Chatbot{
                   playHard();
               }
           }
-        }
-      }
   }
 
   private int whatLtr(String lltr){
     int x;
     if (lltr == "a"){
       x = 0;
-    } else if (lltr == "b"){
+    } else if (lltr.equals("b")){
       x = 1;
-    } else if (lltr == "c"){
+    } else if (lltr.equals("c")){
       x = 2;
-    } else if (lltr == "d"){
+    } else if (lltr.equals("d")){
       x = 3;
-    } else if (lltr == "e"){
+    } else if (lltr.equals("e")){
       x = 4;
-    } else if (lltr == "f"){
+    } else if (lltr.equals("f")){
       x = 5;
-    } else if (lltr == "g"){
+    } else if (lltr.equals("g")){
       x = 6;
-    } else if (lltr == "h"){
+    } else if (lltr.equals("h")){
       x = 7;
-    } else if (lltr == "i"){
+    } else if (lltr.equals("i")){
       x = 8;
-    } else if (lltr == "j"){
+    } else if (lltr.equals("j")){
       x = 9;
-    } else if (lltr == "k"){
+    } else if (lltr.equals("k")){
       x = 10;
-    } else if (lltr == "l"){
+    } else if (lltr.equals("l")){
       x = 11;
-    } else if (lltr == "m"){
+    } else if (lltr.equals("m")){
       x = 12;
-    } else if (lltr == "n"){
+    } else if (lltr.equals("n")){
       x = 13;
-    } else if (lltr == "o"){
+    } else if (lltr.equals("o")){
       x = 14;
-    } else if (lltr == "p"){
+    } else if (lltr.equals("p")){
       x = 15;
-    } else if (lltr == "q"){
+    } else if (lltr.equals("q")){
       x = 16;
-    } else if (lltr == "r"){
+    } else if (lltr.equals("r")){
       x = 17;
-    } else if (lltr == "s"){
+    } else if (lltr.equals("s")){
       x = 18;
-    } else if (lltr == "t"){
+    } else if (lltr.equals("t")){
       x = 19;
-    } else if (lltr == "u"){
+    } else if (lltr.equals("u")){
       x = 20;
-    } else if (lltr == "v"){
+    } else if (lltr.equals("v")){
       x = 21;
-    } else if (lltr == "w"){
+    } else if (lltr.equals("w")){
       x = 22;
-    } else if (lltr == "x"){
+    } else if (lltr.equals("x")){
       x = 23;
-    } else if (lltr == "y"){
+    } else if (lltr.equals("y")){
       x = 24;
-    } else if (lltr == "z"){
+    } else if (lltr.equals("z")){
       x = 25;
     } else {
       x = 0;
