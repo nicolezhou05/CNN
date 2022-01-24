@@ -16,6 +16,7 @@ UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * there may be some issues with Ending Letter if you play the game for too long
 * sometimes the computer prints large phrases at once, which may leave the user confused
+* sometimes all the classes don't compile with javac Woo.java, so you may have to instead compile them all with javac *java
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
