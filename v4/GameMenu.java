@@ -48,6 +48,7 @@ public class GameMenu extends Chatbot {
     else
     {
       System.out.println("not a choice buddy.");
+      statement = in.nextLine();
     }
     return response;
   }
