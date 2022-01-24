@@ -29,21 +29,37 @@ public class GameMenu extends Chatbot {
       System.out.println("\n-~-~-");
       GuessNum g = new GuessNum(1,100);
       g.playIter();
+      System.out.println("...\n\t\t......\n\t...\n\nback to menu...\n-~-~-");
+      System.out.println(menu());
+      statement = in.nextLine();
+      System.out.println(menuResponse(statement));
     }
     else if (findKeyword(statement, "letter") >= 0){
       System.out.println("\n-~-~-");
       EndingLetter libby = new EndingLetter();
       libby.play();
+      System.out.println("...\n\t\t......\n\t...\n\nback to menu...\n-~-~-");
+      System.out.println(menu());
+      statement = in.nextLine();
+      System.out.println(menuResponse(statement));
     }
     else if (findKeyword(statement, "madlibs") >= 0){
       System.out.println("\n-~-~-");
       Madlibs maddy = new Madlibs();
       System.out.println(maddy.play());
+      System.out.println("...\n\t\t......\n\t...\n\nback to menu...\n-~-~-");
+      System.out.println(menu());
+      statement = in.nextLine();
+      System.out.println(menuResponse(statement));
     }
     else if (findKeyword(statement, "hangman") >= 0){
       System.out.println("\n-~-~-");
       Hangman holden = new Hangman();
       holden.play();
+      System.out.println("...\n\t\t......\n\t...\n\nback to menu...\n-~-~-");
+      System.out.println(menu());
+      statement = in.nextLine();
+      System.out.println(menuResponse(statement));
     }
     else
     {

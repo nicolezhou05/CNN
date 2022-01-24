@@ -29,21 +29,37 @@ public class Recbot extends Chatbot {
       System.out.println("\n-~-~-");
       EngFiles rec0 = new EngFiles();
       rec0.engGenres();
+      System.out.println("...\n\t\t......\n\t...\n\nback to menu...\n-~-~-");
+      System.out.println(menu());
+      statement = in.nextLine();
+      System.out.println(menuResponse(statement));
     }
     else if (findKeyword(statement, "cn") >= 0){
       System.out.println("\n-~-~-");
       CnFiles rec1 = new CnFiles();
       rec1.cnGenres();
+      System.out.println("...\n\t\t......\n\t...\n\nback to menu...\n-~-~-");
+      System.out.println(menu());
+      statement = in.nextLine();
+      System.out.println(menuResponse(statement));
     }
     else if (findKeyword(statement, "kn") >= 0){
       System.out.println("\n-~-~-");
       KnFiles rec2 = new KnFiles();
       rec2.knGenres();
+      System.out.println("...\n\t\t......\n\t...\n\nback to menu...\n-~-~-");
+      System.out.println(menu());
+      statement = in.nextLine();
+      System.out.println(menuResponse(statement));
     }
     else if (findKeyword(statement, "jp") >= 0){
       System.out.println("\n-~-~-");
       JpFiles rec3 = new JpFiles();
       rec3.jpGenres();
+      System.out.println("...\n\t\t......\n\t...\n\nback to menu...\n-~-~-");
+      System.out.println(menu());
+      statement = in.nextLine();
+      System.out.println(menuResponse(statement));
     }
     else
     {

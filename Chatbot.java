@@ -74,7 +74,7 @@ public class Chatbot {
     }
     else if (findKeyword(statement, "rec") >= 0){
       menu = false;
-      System.out.println("hello hello hello!");
+      System.out.println("-~-~-\n\nhello hello hello!");
       Recbot recs = new Recbot();
       System.out.println(recs.languageSetting());
     }
