@@ -14,7 +14,8 @@ public class GameMenu extends Chatbot {
     String c = "\n\t- play the 'ending letter game'! \n\t\t>say 'letter' to play~";
     String d = "\n\t- create a madlib! \n\t\t>say 'madlibs' to make one~";
     String e = "\n\t- play 'hangman'! \n\t\t>say 'hangman'! to play~";
-    System.out.println(a + b + c + d + e);
+    String f = "\n\t\t- say 'bye' to leave :(";
+    System.out.println(a + b + c + d + e + f);
     String statement = in.nextLine();
     return game(statement);
   }
@@ -24,6 +25,9 @@ public class GameMenu extends Chatbot {
     if ((statement.trim()).length() == 0){
       response = "what game, friendo?";
       statement = in.nextLine();
+    }
+    else if (findKeyword(statement, "bye") >= 0){
+      System.out.println("\nbuh bye...");
     }
     else if (findKeyword(statement, "num") >= 0){
       System.out.println("\n-~-~-");

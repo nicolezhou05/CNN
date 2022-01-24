@@ -57,7 +57,8 @@ public class Chatbot {
     String b = "\n\t- play a game! \n\t\t>say 'game' to play~";
     String c = "\n\t- give you a recommendation! \n\t\t>say 'rec' for my wise insight hehe";
     String d = "\n\t- chat with you and only you~ \n\t\t>say 'chat' to talk to me!";
-    return a + b + c + d;
+    String e = "\n\t\t- \n\t\t- say 'bye' to leave :(";
+    return a + b + c + d + e;
   }
 
   //menu responses
@@ -83,6 +84,10 @@ public class Chatbot {
       System.out.println("\n-~-~-");
       Chat talker = new Chat();
       talker.chat();
+    }
+    else if (findKeyword(statement, "bye") >= 0){
+      menu = false;
+      System.out.println("\nbuh bye...");
     }
     else
     {
