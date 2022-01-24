@@ -111,3 +111,10 @@ genre rather than choice of media as to not let our files get too clustered. [Th
 * Some clean-up being done (commented code being removed)
 * Recs in the oven + Ending-Letter Game in the oven
 ==============================================================
+
+2022-01-23
+--------------------------------------------------------------
+* Basically finished ending letter - some error cases
+* Finished recs
+* Cleaned up chat
+==============================================================

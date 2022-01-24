@@ -90,8 +90,8 @@ public class EndingLetter extends Chatbot{
   }
 
   public void playing(){
-    if (lives < 1){
-      System.out.println("welp, sorry friend, you have no more lives left...\n\tguess i won!");
+    if (lives == 0){
+      System.out.println("\n\twelp, sorry friend, you have no more lives left...\n\tguess i won!");
       return;
     }
     statement = in.nextLine();
@@ -134,8 +134,8 @@ public class EndingLetter extends Chatbot{
 
 //hard mode
   public void playHard(){
-    if (lives < 1){
-      System.out.println("welp, sorry friend, you have no more lives left...\n\tguess i won!");
+    if (lives == 0){
+      System.out.println("\n\twelp, sorry friend, you have no more lives left...\n\tguess i won!");
       return;
     }
     statement = in.nextLine();
