@@ -10,25 +10,31 @@ Your Bot Friend
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow we so BOSS bc...
+* Ending Letter (is it called word chain?)! this code was rather menial and confusing at some points
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
+* there may be some issues with Ending Letter if you play the game for too long
+* sometimes the computer prints large phrases at once, which may leave the user confused
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow! oo!...
+* creating two scanners can leave the computer waiting for the next line twice!
+	-> perhaps the case is the same with several scanners
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-we changed ___ to ___ bc...
+* we decided not to create a separate subclass for each recommendation category
+	-> only did it based on language and genre (not subgenre(s))
+	-> gives user a random rec from a broad category (language > genre > random rec)
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
 ||||||||||||||||||||||||||||||||||||||||||
+* .equals() vs ==
+	-> incredibly important, as we've discussed in class
+	-> this kept us working on Ending Letter for a while
 
 
 
@@ -55,6 +61,7 @@ tales of wisdom gained...
 * With the data we were able to collect, we started to sort them into their genres
 * We hath been met with complications, as certain works fit across multiple genres --> What to do?
 * Considering different ways of sorting
+==============================================================
 
 2022-01-17
 --------------------------------------------------------------
@@ -117,4 +124,10 @@ genre rather than choice of media as to not let our files get too clustered. [Th
 * Basically finished ending letter - some error cases
 * Finished recs
 * Cleaned up chat
+==============================================================
+
+2022-01-24
+--------------------------------------------------------------
+* There may still be a bug in Ending Letter if you play for too long
+* Added code that takes you back to the menu after playing a game/getting a rec
 ==============================================================
